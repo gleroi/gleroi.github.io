@@ -1,0 +1,14 @@
+﻿CACHE MANIFEST
+
+# version: 0.3
+
+CACHE:
+index.html
+js/main.js
+css/style.css
+
+NETWORK:
+*
+
+FALLBACK:
+/ img/default.jpg
