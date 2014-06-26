@@ -1,4 +1,6 @@
-﻿function init() {
+﻿var react = require('react');
+
+function init() {
     var cpt = 0;
     var elm = document.getElementById( "test" );
     setInterval( function () {
@@ -11,17 +13,17 @@
 }
 
 function onUpdateReady() {
-    var elt = document.getElementById("update");
+    var elt = document.getElementById( "update" );
     elt.innerText = "Update ready!";
 }
 
 function onChecking() {
-    var elt = document.getElementById("update");
+    var elt = document.getElementById( "update" );
     elt.innerText = "Checking!";
 }
 
 function onNoUpdate() {
-    var elt = document.getElementById("update");
+    var elt = document.getElementById( "update" );
     elt.innerText = "No update!";
 }
 
