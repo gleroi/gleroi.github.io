@@ -2,8 +2,8 @@
     var cpt = 0;
     var elm = document.getElementById( "test" );
     setInterval( function () {
-        elm.innerText = "BOOO2! " + cpt++;
-    }, 500 );
+        elm.innerText = "BOOO3! " + cpt++;
+    }, 1000 );
 
     applicationCache.addEventListener( "updateready", onUpdateReady );
     applicationCache.addEventListener( "checking", onChecking );
