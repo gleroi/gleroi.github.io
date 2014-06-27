@@ -1,4 +1,4 @@
-﻿var react = require('react');
+﻿var react = require( 'react' );
 
 function init() {
     var cpt = 0;
@@ -10,7 +10,17 @@ function init() {
     applicationCache.addEventListener( "updateready", onUpdateReady );
     applicationCache.addEventListener( "checking", onChecking );
     applicationCache.addEventListener( "noupdate", onNoUpdate );
+
+    react.renderComponent(App(), document.getElementById("content"));
 }
+
+var App = react.createClass( {
+    render: function () {
+        return react.DOM.p( null, ["content",
+            react.DOM.a( { href: "test" }, "link content" )
+        ] );
+    }
+});
 
 function onUpdateReady() {
     var elt = document.getElementById( "update" );
