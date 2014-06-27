@@ -8,6 +8,7 @@
     "email": "f"
   },
   "dependencies": {
+    "es6-promise": "^1.0.0",
     "express": "3.4.4",
     "react": "^0.10.0"
   },
