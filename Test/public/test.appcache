@@ -1,14 +1,20 @@
-﻿CACHE MANIFEST
+CACHE MANIFEST
 
-# version: 0.22
 
 CACHE:
 index.html
-js/bundle.js
 css/style.css
+img/default.jpg
+js/bundle.js
+
 
 NETWORK:
+http://*
+https://*
 *
 
+
 FALLBACK:
-/ img/default.jpg
+img/default.jpg
+
+# hash: c1f1f01dcf39ab5769d55270b80ad163eb2f2835fe2c2e747ca209396226e57a

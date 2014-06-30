@@ -13,7 +13,15 @@ var AppDispatcher = merge(Dispatcher.prototype, {
       source: 'VIEW_ACTION',
       action: action
     });
-  }
+  },
+
+  handleUpdateNotification: function(action) {
+      this.dispatch({
+          source: 'APP_CACHE',
+          action: action
+      });
+  },
+
 
 });
 

@@ -32,6 +32,8 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Compile Include="gulpfile.js" />
+    <Compile Include="src\appComponent.js" />
+    <Compile Include="src\appcache.js" />
     <Compile Include="src\appDispatcher.js" />
     <Compile Include="src\dispatcher.js" />
     <Compile Include="src\main.js" />
