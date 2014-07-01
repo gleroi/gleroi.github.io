@@ -9,12 +9,9 @@ js/bundle.js
 
 
 NETWORK:
-http://*
-https://*
-*
 
 
 FALLBACK:
-img/default.jpg
+/%20img/default.jpg
 
-# hash: 68721d29aea51b9e4664f5dd45b3d0842911ca49fcfa1fcc0027e26ebffa340c
+# hash: 7260ece48b84c8b7c8edc1f574b585c766b17d6a981c0f30d493aada49887769

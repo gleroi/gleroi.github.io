@@ -17,7 +17,7 @@ var App = react.createClass({
 
     render: function () {
         console.log(this.state.status);
-        return react.DOM.p(null, ["content",
+        return react.DOM.p(null, ["content 25",
             react.DOM.a({ href: "test" }, "link content"),
             react.DOM.div(null, [this.state.status])
         ]);

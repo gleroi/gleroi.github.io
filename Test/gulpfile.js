@@ -15,12 +15,18 @@ gulp.task('manifest', function () {
       .pipe(manifest({
           hash: true,
           preferOnline: false,
-          network: ['http://*', 'https://*', '*'],
+          network: [],
           filename: 'test.appcache',
           exclude: ['test.appcache', 'img/default.jpg'],
           fallback: ['img/default.jpg']
       }))
       .pipe(gulp.dest('public'));
+});
+
+gulp.task('watch', function () {
+    gulp.watch('src/*.js', ["default"], function (event) {
+        console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+    });
 });
 
 gulp.task('default', ['browserify', 'manifest']);
