@@ -9,9 +9,10 @@ js/bundle.js
 
 
 NETWORK:
+*
 
 
 FALLBACK:
-/%20img/default.jpg
+img/default.jpg
 
-# hash: 7260ece48b84c8b7c8edc1f574b585c766b17d6a981c0f30d493aada49887769
+# hash: 5acbb3567696514058cc17ef9d7df81a1233defac708083f528d9e9d178c68f4

@@ -14,8 +14,10 @@
   },
   "devDependencies": {
     "browserify": "^4.1.11",
+    "csv": "^0.4.0",
+    "fast-csv": "^0.4.1",
     "gulp": "^3.8.2",
-    "vinyl-source-stream": "^0.1.1",
-    "gulp-manifest": "0.0.5"
+    "gulp-manifest": "0.0.5",
+    "vinyl-source-stream": "^0.1.1"
   }
 }

@@ -15,7 +15,7 @@ gulp.task('manifest', function () {
       .pipe(manifest({
           hash: true,
           preferOnline: false,
-          network: [],
+          network: ['*'],
           filename: 'test.appcache',
           exclude: ['test.appcache', 'img/default.jpg'],
           fallback: ['img/default.jpg']
