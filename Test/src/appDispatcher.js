@@ -15,13 +15,9 @@ var AppDispatcher = merge(Dispatcher.prototype, {
     });
   },
 
-  handleUpdateNotification: function(action) {
-      this.dispatch({
-          source: 'APP_CACHE',
-          action: action
-      });
+  initializeApp: function () {
+    this.dispatch({source: 'APP', action: 'initialize'});    
   },
-
 
 });
 
