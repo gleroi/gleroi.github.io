@@ -18,7 +18,7 @@ csv.fromPath(filepath, {
     });
 
 function save() {
-    fs.writeFile('ciqual.json', JSON.stringify(rows, null, 4), function (err) {
+    fs.writeFile('public/res/ciqual.json', JSON.stringify(rows, null, 4), function (err) {
         if (err) { 
             console.log('error : ', err); 
         }

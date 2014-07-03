@@ -36,6 +36,7 @@
     <Compile Include="src\appComponent.js" />
     <Compile Include="src\appcache.js" />
     <Compile Include="src\appDispatcher.js" />
+    <Compile Include="src\ciqualStore.js" />
     <Compile Include="src\dispatcher.js" />
     <Compile Include="src\main.js" />
     <Content Include="package.json" />
@@ -50,6 +51,7 @@
     <Folder Include="public\img\" />
     <Folder Include="public\js\" />
     <Folder Include="public\css\" />
+    <Folder Include="public\res\" />
     <Folder Include="src\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />

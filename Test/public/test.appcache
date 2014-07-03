@@ -6,6 +6,7 @@ index.html
 css/style.css
 img/default.jpg
 js/bundle.js
+res/ciqual.json
 
 
 NETWORK:
@@ -15,4 +16,4 @@ NETWORK:
 FALLBACK:
 img/default.jpg
 
-# hash: 5acbb3567696514058cc17ef9d7df81a1233defac708083f528d9e9d178c68f4
+# hash: 29f9bb0b9635368eba25bd4b564c5e55a795d00c99e494ec89a4e98c1a33e92c
