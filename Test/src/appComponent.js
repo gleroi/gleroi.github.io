@@ -20,8 +20,9 @@ var App = react.createClass({
 
     render: function () {
         console.log(this.state.status);
-        var lis = this.state.items.map(function (it) {
-            return react.DOM.li(null, [it.ORIGFDNM]);    
+        console.log(this.state.items);
+        var lis = this.state.items.map(function (it, i) {
+            return react.DOM.li(null, [i, it.ORIGFDNM]);
         });
         return react.DOM.p(null, ["content 26",
             react.DOM.a({ href: "test" }, "link content"),

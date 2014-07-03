@@ -13,9 +13,13 @@ CiqualStore.prototype.initialize = function () {
     var req = http.request({
         path: '/res/ciqual.json'
     }, function (res) {
+        var result = "";
         res.on('data', function (chunk) {
             console.log('ciqualStore : initialize : response :', chunk.length);
-            self.items = self.items.concat(JSON.parse(chunk));
+            result += chunk;
+        });
+        res.on('end', function () {
+            self.items = JSON.parse(result);
             self.emit('change');
         });
     });
