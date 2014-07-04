@@ -38,8 +38,11 @@
     <Compile Include="src\appDispatcher.js" />
     <Compile Include="src\ciqualStore.js" />
     <Compile Include="src\dispatcher.js" />
+    <Compile Include="src\ingredientView.js" />
     <Compile Include="src\main.js" />
     <Content Include="package.json" />
+    <Content Include="public\css\bootstrap-theme.css" />
+    <Content Include="public\css\bootstrap.css" />
     <Content Include="public\css\style.css" />
     <Content Include="public\img\default.jpg" />
     <Content Include="public\index.html" />

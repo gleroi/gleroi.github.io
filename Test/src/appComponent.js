@@ -1,6 +1,9 @@
 ﻿var react = require('react');
+var bs = require('react-bootstrap');
 var appCache = require('./appcache.js');
 var ciqual = require('./ciqualStore.js');
+var dispatcher = require('./appDispatcher.js');
+var IngredientView = require('./ingredientView.js');
 
 var App = react.createClass({
 
@@ -19,16 +22,31 @@ var App = react.createClass({
     },
 
     render: function () {
-        console.log(this.state.status);
-        console.log(this.state.items);
         var lis = this.state.items.map(function (it, i) {
-            return react.DOM.li(null, [i, it.ORIGFDNM]);
-        });
-        return react.DOM.p(null, ["content 26",
-            react.DOM.a({ href: "test" }, "link content"),
-            react.DOM.div(null, [this.state.status]),
-            react.DOM.ul(null, lis)
-        ]);
+            return react.DOM.li({ key: it.ORIGFDCD, onClick: this._selectItem.bind(this, it) }, [react.DOM.span(null, [it.ORIGFDNM])]);
+        }, this);
+        return bs.Grid({ fluid: true }, [
+            bs.Row(null, [this.state.status]),
+            bs.Row(null, [
+                bs.Col({ md: 6 }, [
+                    bs.Panel(null, [ 
+                        react.DOM.input({ onChange: this._updateFilter}),
+                        react.DOM.ul(null, lis)])
+                ]),
+                bs.Col({ md: 6 }, [
+                    react.DOM.div([], [IngredientView({ item: this.state.selectedItem })])
+                ])
+            ])
+        ]);;
+    },
+
+    _selectItem: function (item) {
+        dispatcher.handleViewAction('select_item', { itemId: item.ORIGFDCD })
+    },
+
+    _updateFilter: function (e) {
+        var value = e.target.value;
+        dispatcher.handleViewAction('filter_items', { filter: value });
     },
 
     _onUpdate: function (e) {
@@ -36,7 +54,7 @@ var App = react.createClass({
     },
 
     _onDataUpdate: function (e) {
-        this.setState({ items: ciqual.getItems() });    
+        this.setState({ items: ciqual.getItems(), selectedItem: ciqual.getSelectedItem() });    
     }
 });
 

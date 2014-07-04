@@ -3,6 +3,8 @@ CACHE MANIFEST
 
 CACHE:
 index.html
+css/bootstrap-theme.css
+css/bootstrap.css
 css/style.css
 img/default.jpg
 js/bundle.js
@@ -16,4 +18,4 @@ NETWORK:
 FALLBACK:
 img/default.jpg
 
-# hash: 5ef8c8655532a1ade27b3df00ddc25a9a5ad8c1a789b6b8aa7cf57021e72d7e5
+# hash: d16fae1b8e00d892ae37393868543fced5b832b802cc41c27c2c61fb7892e186

@@ -1,23 +1,25 @@
-﻿var Dispatcher = require('./dispatcher');
-var merge = require('react/lib/merge');
+﻿var Dispatcher = require( './dispatcher' );
+var merge = require( 'react/lib/merge' );
 
-var AppDispatcher = merge(Dispatcher.prototype, {
+var AppDispatcher = merge( Dispatcher.prototype, {
 
-  /**
-   * A bridge function between the views and the dispatcher, marking the action
-   * as a view action.  Another variant here could be handleServerAction.
-   * @param  {object} action The data coming from the view.
-   */
-  handleViewAction: function(action) {
-    this.dispatch({
-      source: 'VIEW_ACTION',
-      action: action
-    });
+    /**
+     * A bridge function between the views and the dispatcher, marking the action
+     * as a view action.  Another variant here could be handleServerAction.
+     * @param  {object} action The data coming from the view.
+     */
+    handleViewAction: function ( action, args ) {
+        var payload = {
+            source: 'VIEW_ACTION',
+            action: action
+        };
+        if (args) payload.args = args;
+        this.dispatch(payload);
   },
 
-  initializeApp: function () {
-    this.dispatch({source: 'APP', action: 'initialize'});    
-  },
+    initializeApp: function () {
+        this.dispatch( { source: 'APP', action: 'initialize' });
+    },
 
 });
 
