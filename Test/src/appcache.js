@@ -1,4 +1,4 @@
-﻿"use strict";
+﻿'use strict';
 
 var EventEmitter = require('events').EventEmitter;
 var merge = require('react/lib/merge');

@@ -19,6 +19,7 @@
     "fast-csv": "^0.4.1",
     "gulp": "^3.8.2",
     "gulp-manifest": "0.0.5",
+    "underscore": "^1.6.0",
     "vinyl-source-stream": "^0.1.1"
   }
 }

@@ -34,7 +34,7 @@ CiqualStore.prototype.getItems = function () {
 };
 
 CiqualStore.prototype.filterItems = function (value) {
-    this.filteredItems = this.items.filter(function (it) { return it.ORIGFDNM.toLowerCase().indexOf(value) !== -1; });
+    this.filteredItems = this.items.filter(function (it) { return it.name.toLowerCase().indexOf(value) !== -1; });
     this.emit('change');
 };
 
@@ -43,7 +43,7 @@ CiqualStore.prototype.selectItem = function (itemId) {
     var len = this.items.length;
     for (var i = 0; i < len; i++) {
         var item = this.items[i];
-        if (item.ORIGFDCD === itemId) {
+        if (item.id === itemId) {
             this.selectedItem = item;
             this.emit('change');
             break;
