@@ -6,8 +6,12 @@ index.html
 css/bootstrap-theme.css
 css/bootstrap.css
 css/style.css
-img/default.jpg
+fonts/glyphicons-halflings-regular.eot
+fonts/glyphicons-halflings-regular.svg
+fonts/glyphicons-halflings-regular.ttf
+fonts/glyphicons-halflings-regular.woff
 js/bundle.js
+img/default.jpg
 res/ciqual.json
 
 
@@ -18,4 +22,4 @@ NETWORK:
 FALLBACK:
 img/default.jpg
 
-# hash: 47ef9bf7778a3edb4d3b13b2f8f8ef5970b3ea7839ea936df5138c17c24e8904
+# hash: fa5f6d4dc577804fd479ccf928aa6764c4cbe83f00be432fd3f347bff639fce6

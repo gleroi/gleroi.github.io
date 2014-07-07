@@ -5,6 +5,7 @@ var IngredientView = react.createClass({
     render: function () {
         var item = this.props.item;  
         var fields = [];
+        var header = 'No item selected';
 
         if (item) {
             for (var field in item) {
@@ -13,11 +14,15 @@ var IngredientView = react.createClass({
                     bs.Col({ md: 1 }, [item[field]])
                 ]));
             }
+            header = react.DOM.h1(null, item.name);
         }
         else {
-            fields.push(react.DOM.div(null, ['No item selected']));    
+            fields.push(react.DOM.div(null, [header]));    
         }
-        return bs.Panel(null, fields);
+        return bs.Panel({
+            bsStyle: 'primary',
+            header: header
+        }, fields);
     }
 });
 

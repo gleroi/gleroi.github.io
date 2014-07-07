@@ -1,5 +1,6 @@
-﻿var react = require( 'react' );
-var _ = require( 'underscore' );
+﻿var react = require('react');
+var bs = require('react-bootstrap');
+var _ = require('underscore');
 
 var TreeNode = react.createClass( {
     getInitialState: function () {
@@ -8,12 +9,15 @@ var TreeNode = react.createClass( {
 
     render: function () {
         var hidden = this.state.hidden;
+        var template = this.props.itemTemplate;
         return react.DOM.li(null, [
-            react.DOM.span({ onClick: this._toggleShowHidden }, [this.props.key]),
-            hidden ? null : react.DOM.ul( null, _.map( this.props.items, function ( it ) {
-                return react.DOM.li( { key: it.id, onClick: _.partial(this.props.onSelectItem, it) },
-                    [ react.DOM.span(null, [it.name]) ]);
-            }, this ))
+            bs.Glyphicon({ glyph: hidden ? 'chevron-down' : 'chevron-up', onClick: this._toggleShowHidden }, [this.props.key]),
+            react.DOM.ul({ style: { display: hidden ? 'none' : '' } }, 
+                _.map( this.props.items, function ( it ) {
+                    return template( { key: it.id, onClick: _.partial(this.props.onSelectItem, it) },
+                        [ react.DOM.span(null, [it.name]) ]);
+                }, this )
+            )
         ]);
     },
 
@@ -28,14 +32,16 @@ var IngredientsTree = react.createClass( {
     renderItemTree: function ( items ) {
         var groups = _.groupBy( items, function ( it ) { return it.category; });
         var lis = _.map( groups, function ( val, key ) {
-            return TreeNode({ key: key, items: val, onSelectItem: this.props.onSelectItem });
+            return TreeNode({ key: key, items: val, 
+                itemTemplate: react.DOM.li,
+                onSelectItem: this.props.onSelectItem });
         }, this );
-        return lis;
+        return react.DOM.ul({ className: this.props.className }, lis);
     },
 
     render: function () {
         var lis = this.renderItemTree( this.props.items );
-        return react.DOM.ul( null, lis );
+        return lis;
     }
 });
 

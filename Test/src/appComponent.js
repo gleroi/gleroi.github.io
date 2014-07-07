@@ -30,8 +30,10 @@ var App = react.createClass({
             bs.Row(null, [
                 bs.Col({ md: 6 }, [
                     bs.Panel(null, [ 
-                        react.DOM.input({ onChange: this._updateFilter}),
-                        IngredientsTree({ items: this.state.items, onSelectItem: this._selectItem })
+                        bs.Row(null, react.DOM.input({ className: 'col-md-12', name: 'searchFilter', type: 'search',
+                            onChange: this._updateFilter})),
+                        bs.Row(null, IngredientsTree({ className: "row",
+                            items: this.state.items, onSelectItem: this._selectItem }))
                     ]),
                 ]),
                 bs.Col({ md: 6 }, [
@@ -40,7 +42,6 @@ var App = react.createClass({
             ])
         ]);
     },
-
 
     _selectItem: function (item) {
         console.log(this);
