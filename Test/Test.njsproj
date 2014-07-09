@@ -45,6 +45,8 @@
     <Content Include="public\css\bootstrap-theme.css" />
     <Content Include="public\css\bootstrap.css" />
     <Content Include="public\css\style.css" />
+    <Content Include="public\img\chevron-down.png" />
+    <Content Include="public\img\chevron-up.png" />
     <Content Include="public\img\default.jpg" />
     <Content Include="public\index.html" />
     <Content Include="public\test.appcache" />

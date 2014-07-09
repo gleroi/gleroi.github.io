@@ -6,3 +6,16 @@
 a {
     color: #00B7FF;
 }
+
+
+ul.ingredients-tree li.chevron-up {
+    list-style-image: url('../img/chevron-up.png');
+}
+
+ul.ingredients-tree li.chevron-down {
+    list-style-image: url('../img/chevron-down.png');
+}
+
+ul.ingredients-tree li.chevron-up li {
+    list-style-image: initial;
+}
