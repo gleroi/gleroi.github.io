@@ -33,14 +33,15 @@
     <Compile Include="app.js" />
     <Compile Include="ciqual-parser.js" />
     <Compile Include="gulpfile.js" />
-    <Compile Include="src\appComponent.js" />
+    <Compile Include="src\ingredients\ingredientsPage.js" />
     <Compile Include="src\appcache.js" />
     <Compile Include="src\appDispatcher.js" />
-    <Compile Include="src\ciqualStore.js" />
+    <Compile Include="src\ingredients\ciqualStore.js" />
     <Compile Include="src\dispatcher.js" />
-    <Compile Include="src\ingredientsTree.js" />
-    <Compile Include="src\ingredientView.js" />
+    <Compile Include="src\ingredients\ingredientsTree.js" />
+    <Compile Include="src\ingredients\ingredientView.js" />
     <Compile Include="src\main.js" />
+    <Compile Include="src\navigator.js" />
     <Content Include="package.json" />
     <Content Include="public\css\bootstrap-theme.css" />
     <Content Include="public\css\bootstrap.css" />
@@ -59,6 +60,8 @@
     <Folder Include="public\css\" />
     <Folder Include="public\res\" />
     <Folder Include="src\" />
+    <Folder Include="src\ingredients\" />
+    <Folder Include="src\preferences\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
   <ProjectExtensions>
