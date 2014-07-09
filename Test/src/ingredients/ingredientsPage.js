@@ -1,9 +1,8 @@
 ﻿var react = require('react');
 var bs = require('react-bootstrap');
 
-var appCache = require('./appcache.js');
+var dispatcher = require('../appDispatcher.js');
 var ciqual = require('./ciqualStore.js');
-var dispatcher = require('./appDispatcher.js');
 var IngredientView = require('./ingredientView.js');
 var IngredientsTree = require('./ingredientsTree.js');
 
@@ -15,7 +14,6 @@ var App = react.createClass({
     },
 
     componentDidMount: function() {
-        appCache.addEventListener(this._onUpdate);
         ciqual.on('change', this._onDataUpdate);
     },
 
@@ -26,7 +24,6 @@ var App = react.createClass({
 
     render: function () {
         return bs.Grid({ fluid: true }, [
-            bs.Row(null, [this.state.status]),
             bs.Row(null, [
                 bs.Col({ md: 6 }, [
                     bs.Panel(null, [ 
@@ -51,10 +48,6 @@ var App = react.createClass({
     _updateFilter: function (e) {
         var value = e.target.value;
         dispatcher.handleViewAction('filter_items', { filter: value });
-    },
-
-    _onUpdate: function (e) {
-        this.setState({ status: e.state });
     },
 
     _onDataUpdate: function (e) {

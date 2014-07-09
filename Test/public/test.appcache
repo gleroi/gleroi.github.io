@@ -3,6 +3,9 @@ CACHE MANIFEST
 
 CACHE:
 index.html
+css/bootstrap-theme.css
+css/bootstrap.css
+css/style.css
 fonts/glyphicons-halflings-regular.eot
 fonts/glyphicons-halflings-regular.svg
 fonts/glyphicons-halflings-regular.ttf
@@ -10,9 +13,6 @@ fonts/glyphicons-halflings-regular.woff
 img/chevron-down.png
 img/chevron-up.png
 img/default.jpg
-css/bootstrap-theme.css
-css/bootstrap.css
-css/style.css
 js/bundle.js
 res/ciqual.json
 
@@ -24,4 +24,4 @@ NETWORK:
 FALLBACK:
 img/default.jpg
 
-# hash: c4053e1273c472c97ff51d6cd802b4dccce515f988c75d5439119f172ec36c43
+# hash: a4e7013b98f6591ed526ee6c0fd5c8521f6ebc109e86d9bc557dd196ed2a366f

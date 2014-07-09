@@ -1,5 +1,5 @@
 ﻿var react = require('react');
-var App = require('./appComponent.js');
+var App = require('./ingredients/ingredientsPage.js');
 var appDispatcher = require('./appDispatcher.js');
 
 function main() {

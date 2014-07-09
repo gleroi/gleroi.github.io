@@ -1,6 +1,6 @@
 ﻿var http = require('http');
 var EventEmitter = require('events').EventEmitter;
-var dispatcher = require('./appDispatcher');
+var dispatcher = require('../appDispatcher');
 
 function CiqualStore (){
     this.items = [];
