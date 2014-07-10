@@ -43,7 +43,7 @@ var IngredientsTree = react.createClass( {
             popover = bs.Popover({ placement: 'bottom', title: 'Ingrédients'}, ul)
         }
         return react.DOM.div({}, [
-            react.DOM.input({ className: 'col-md-12', name: 'searchFilter', type: 'search',
+            react.DOM.input({ className: 'col-xs-12', name: 'searchFilter', type: 'search',
                 onChange: this.props.onUpdateFilter}),
             popover
         ]);
