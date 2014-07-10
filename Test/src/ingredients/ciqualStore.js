@@ -15,7 +15,7 @@ CiqualStore.prototype.initialize = function () {
     var req = http.request({
         path: window.location.pathname + 'res/ciqual.json',
         headers: {
-            'Content-Type': 'text/plain'
+            'Content-Type': 'application/json'
         }
     }, function (res) {
         var result = "";
