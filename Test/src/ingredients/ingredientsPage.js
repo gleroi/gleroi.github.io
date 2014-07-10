@@ -44,6 +44,7 @@ var App = react.createClass({
     },
 
     _updateFilter: function (e) {
+        console.log('value', e.target.value);
         var value = e.target.value;
         dispatcher.handleViewAction('filter_items', { filter: value });
     },
