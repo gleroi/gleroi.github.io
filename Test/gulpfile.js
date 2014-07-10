@@ -24,7 +24,7 @@ gulp.task('manifest', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('src/*.js', ["default"], function (event) {
+    gulp.watch('src/**/*.js', ["default"], function (event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
     gulp.watch('public/css/*.css', ['manifest'], function (event) {

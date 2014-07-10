@@ -25,17 +25,13 @@ var App = react.createClass({
     render: function () {
         return bs.Grid({ fluid: true }, [
             bs.Row(null, [
-                bs.Col({ md: 6 }, [
-                    bs.Panel(null, [ 
-                        bs.Row(null, react.DOM.input({ className: 'col-md-12', name: 'searchFilter', type: 'search',
-                            onChange: this._updateFilter})),
-                        bs.Row(null, IngredientsTree({ className: "row",
-                            items: this.state.items, onSelectItem: this._selectItem }))
-                    ]),
+                bs.Panel(null, [
+                    IngredientsTree({ className: "row", items: this.state.items, 
+                        onSelectItem: this._selectItem, onUpdateFilter: this._updateFilter })
                 ]),
-                bs.Col({ md: 6 }, [
-                    react.DOM.div(null, [IngredientView({ item: this.state.selectedItem })])
-                ])
+            ]),
+            bs.Row(null, [
+                react.DOM.div({ md: 12 }, [IngredientView({ item: this.state.selectedItem })])
             ])
         ]);
     },

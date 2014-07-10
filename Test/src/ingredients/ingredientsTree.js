@@ -31,19 +31,29 @@ var TreeNode = react.createClass({
 var IngredientsTree = react.createClass( {
 
     renderItemTree: function ( items ) {
-        var groups = _.groupBy( items, function ( it ) { return it.category; });
-        var lis = _.map( groups, function ( val, key ) {
-            return TreeNode({ key: key, items: val, 
-                itemTemplate: react.DOM.li,
-                onSelectItem: this.props.onSelectItem });
-        }, this );
-        return react.DOM.ul({ className: this.props.className + " ingredients-tree" }, lis);
+        var popover = null;
+        if (!_.isEmpty(items)) {
+            var groups = _.groupBy( items, function ( it ) { return it.category; });
+            lis = _.map(groups, function ( val, key ) {
+                return TreeNode({ key: key, items: val, 
+                    itemTemplate: react.DOM.li,
+                    onSelectItem: this.props.onSelectItem });
+            }, this );
+            var ul = react.DOM.ul({ className: this.props.className + " ingredients-tree" }, lis);
+            popover = bs.Popover({ placement: 'bottom', title: 'Ingrédients'}, ul)
+        }
+        return react.DOM.div({}, [
+            react.DOM.input({ className: 'col-md-12', name: 'searchFilter', type: 'search',
+                onChange: this.props.onUpdateFilter}),
+            popover
+        ]);
     },
 
     render: function () {
         var lis = this.renderItemTree( this.props.items );
         return lis;
     }
+
 });
 
 module.exports = IngredientsTree;
