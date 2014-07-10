@@ -25,13 +25,15 @@ var App = react.createClass({
     render: function () {
         return bs.Grid({ fluid: true }, [
             bs.Row(null, [
-                bs.Panel({ xs: 12 }, [
+                bs.Col({ xs: 12 }, [
                     IngredientsTree({ className: "row", items: this.state.items, 
                         onSelectItem: this._selectItem, onUpdateFilter: this._updateFilter })
                 ]),
             ]),
             bs.Row(null, [
-                bs.Col({ xs: 12 }, [IngredientView({ item: this.state.selectedItem })])
+                bs.Col({ xs: 12 }, [
+                    IngredientView({ item: this.state.selectedItem })
+                ])
             ])
         ]);
     },

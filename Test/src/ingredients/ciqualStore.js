@@ -53,6 +53,7 @@ CiqualStore.prototype.selectItem = function (itemId) {
         var item = this.items[i];
         if (item.id === itemId) {
             this.selectedItem = item;
+            this.filteredItems = [];
             this.emit('change');
             break;
         }

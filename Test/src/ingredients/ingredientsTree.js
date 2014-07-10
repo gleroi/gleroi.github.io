@@ -31,22 +31,32 @@ var TreeNode = react.createClass({
 var IngredientsTree = react.createClass( {
 
     renderItemTree: function ( items ) {
-        var popover = null;
+        var ul = null;
         if (!_.isEmpty(items)) {
             var groups = _.groupBy( items, function ( it ) { return it.category; });
             lis = _.map(groups, function ( val, key ) {
                 return TreeNode({ key: key, items: val, 
                     itemTemplate: react.DOM.li,
-                    onSelectItem: this.props.onSelectItem });
+                    onSelectItem: this.onSelectItem });
             }, this );
-            var ul = react.DOM.ul({ className: this.props.className + " ingredients-tree" }, lis);
-            popover = bs.Popover({ placement: 'bottom', title: 'Ingrédients'}, ul)
+            ul = react.DOM.ul({ className: this.props.className + " ingredients-tree" }, lis);
         }
-        return react.DOM.div({}, [
-            react.DOM.input({ className: 'col-xs-12', name: 'searchFilter', type: 'search',
-                onChange: this.props.onUpdateFilter}),
-            popover
+        var popover = bs.Popover({ title: 'Ingrédients' }, ul);
+        return react.DOM.div(null, [
+            bs.OverlayTrigger({ placement: 'bottom', overlay: popover, trigger: 'manual', ref: 'overlay' },
+                react.DOM.input({ className: 'col-xs-12', name: 'searchFilter', type: 'search',
+                    onChange: this.props.onUpdateFilter, onFocus: this.onFocused })
+            )
         ]);
+    },
+
+    onFocused: function (e) {
+        this.refs.overlay.show();
+    },
+
+    onSelectItem: function (it) {
+        this.refs.overlay.hide();
+        this.props.onSelectItem(it);
     },
 
     render: function () {
