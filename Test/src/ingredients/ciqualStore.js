@@ -13,7 +13,10 @@ CiqualStore.prototype = new EventEmitter();
 CiqualStore.prototype.initialize = function () {
     var self = this;
     var req = http.request({
-        path: window.location.pathname + 'res/ciqual.json'
+        path: window.location.pathname + 'res/ciqual.json',
+        headers: {
+            'Content-Type': 'text/plain'
+        }
     }, function (res) {
         var result = "";
         res.on('data', function (chunk) {
