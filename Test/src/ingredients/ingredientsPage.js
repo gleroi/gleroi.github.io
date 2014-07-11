@@ -24,11 +24,17 @@ var App = react.createClass({
 
     render: function () {
         return bs.Grid({ fluid: true }, [
-            bs.Row(null, [
-                bs.Col({ xs: 12 }, [
-                    IngredientsTree({ className: "row", items: this.state.items, 
-                        onSelectItem: this._selectItem, onUpdateFilter: this._updateFilter })
+            bs.Panel(null, [
+                bs.Row(null, [
+                    react.DOM.input({ className: 'col-xs-12', name: 'searchFilter', type: 'search',
+                        onChange: this._updateFilter, value: this.state.inputValue })
                 ]),
+                bs.Row(null, [
+                    bs.Col({ xs: 12 }, [
+                        IngredientsTree({ className: "row", items: this.state.items, 
+                            onSelectItem: this._selectItem })
+                    ]),
+                ])
             ]),
             bs.Row(null, [
                 bs.Col({ xs: 12 }, [
@@ -39,13 +45,13 @@ var App = react.createClass({
     },
 
     _selectItem: function (item) {
-        console.log(this);
+        this.setState({ inputValue: '' });
         dispatcher.handleViewAction('select_item', { itemId: item.id });
     },
 
     _updateFilter: function (e) {
-        console.log('value', e.target.value);
         var value = e.target.value;
+        this.setState({ inputValue: value });
         dispatcher.handleViewAction('filter_items', { filter: value });
     },
 

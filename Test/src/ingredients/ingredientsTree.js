@@ -30,12 +30,8 @@ var TreeNode = react.createClass({
 
 var IngredientsTree = react.createClass( {
 
-    getInitialState: function () {
-        return { inputValue: '' };
-    },
-
     renderItemTree: function ( items ) {
-        var ul = null;
+        var ul = react.DOM.div();
         if (!_.isEmpty(items)) {
             var groups = _.groupBy( items, function ( it ) { return it.category; });
             lis = _.map(groups, function ( val, key ) {
@@ -45,21 +41,11 @@ var IngredientsTree = react.createClass( {
             }, this );
             ul = react.DOM.ul({ className: this.props.className + " ingredients-tree" }, lis);
         }
-        return bs.Panel(null, [
-            bs.Row(null, [react.DOM.input({ className: 'col-xs-12', name: 'searchFilter', type: 'search',
-                    onChange: this.onInputChanged, value: this.state.inputValue })]),
-            bs.Row(null, ul)
-        ]);
-    },
-
-    onInputChanged: function (e) {
-        this.setState({ inputValue: e.target.value });
-        this.props.onUpdateFilter(e);
+        return ul;
     },
 
     onSelectItem: function (it) {
         this.props.onSelectItem(it);
-        this.setState({ inputValue: '' });
     },
 
     render: function () {

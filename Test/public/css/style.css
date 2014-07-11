@@ -8,6 +8,12 @@ a {
 }
 
 
+ul.ingredients-tree {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #808080;
+}
+
 ul.ingredients-tree li.chevron-up {
     list-style-image: url('../img/chevron-up.png');
 }
