@@ -9,9 +9,12 @@ a {
 
 
 ul.ingredients-tree {
-    height: 300px;
+    max-height: 340px;
     overflow-y: auto;
     border: 1px solid #808080;
+    position: absolute;
+    z-index: 1060;
+    background-color: white;
 }
 
 ul.ingredients-tree li.chevron-up {
