@@ -1,4 +1,4 @@
-﻿var http = require('http');
+﻿var $ = require('jquery');
 var EventEmitter = require('events').EventEmitter;
 var dispatcher = require('../appDispatcher');
 
@@ -12,22 +12,11 @@ CiqualStore.prototype = new EventEmitter();
 
 CiqualStore.prototype.initialize = function () {
     var self = this;
-    var req = http.request({
-        path: window.location.pathname + 'res/ciqual.json',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    }, function (res) {
-        var result = [];
-        res.on('data', function (chunk) {
-            result.push(chunk);
-        });
-        res.on('end', function () {
-            self.items = JSON.parse(result.join(''));
+    $.get(window.location.pathname + 'res/ciqual.json',
+        function (res) {
+            self.items = res;
             self.emit('change');
-        });
-    });
-    req.end();
+        }, 'json');
 };
 
 CiqualStore.prototype.getItems = function () {
