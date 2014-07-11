@@ -2,13 +2,12 @@
     color: #00B7FF;
 }
 
-
 ul.ingredients-tree {
     max-height: 340px;
     overflow-y: auto;
+    z-index: 1;
     border: 1px solid #808080;
     position: absolute;
-    z-index: 1060;
     background-color: white;
 }
 

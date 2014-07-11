@@ -17,7 +17,7 @@ var TreeNode = react.createClass({
                 _.map( this.props.items, function ( it ) {
                     return template( { key: it.id, onClick: _.partial(this.props.onSelectItem, it) },
                         [ react.DOM.span(null, [it.name]) ]);
-                }, this )
+                }, this)
             )
         ]);
     },

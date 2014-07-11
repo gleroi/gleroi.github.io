@@ -24,7 +24,8 @@ var App = react.createClass({
 
     render: function () {
         return bs.Grid({ fluid: true }, [
-            bs.Panel(null, [
+            react.DOM.div({ onBlur: this.onBlured, onFocus: this.onFocused },
+            bs.Panel(null,  [
                 bs.Row(null, [
                     react.DOM.input({ className: 'col-xs-12', name: 'searchFilter', type: 'search',
                         onChange: this._updateFilter, value: this.state.inputValue })
@@ -35,7 +36,7 @@ var App = react.createClass({
                             onSelectItem: this._selectItem })
                     ]),
                 ])
-            ]),
+            ])),
             bs.Row(null, [
                 bs.Col({ xs: 12 }, [
                     IngredientView({ item: this.state.selectedItem })
@@ -44,7 +45,18 @@ var App = react.createClass({
         ]);
     },
 
+    onBlured: function (e) {
+        console.log('blur!');
+        e.stopPropagation();
+    },
+
+    onFocused: function (e) {
+        console.log('focus!');
+        e.stopPropagation();
+    },
+
     _selectItem: function (item) {
+        console.log('clicked');
         this.setState({ inputValue: '' });
         dispatcher.handleViewAction('select_item', { itemId: item.id });
     },
@@ -52,6 +64,7 @@ var App = react.createClass({
     _updateFilter: function (e) {
         var value = e.target.value;
         this.setState({ inputValue: value });
+        console.log(e);
         dispatcher.handleViewAction('filter_items', { filter: value });
     },
 
