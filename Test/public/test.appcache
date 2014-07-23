@@ -6,15 +6,15 @@ index.html
 css/bootstrap-theme.css
 css/bootstrap.css
 css/style.css
+fonts/glyphicons-halflings-regular.eot
+fonts/glyphicons-halflings-regular.svg
+fonts/glyphicons-halflings-regular.ttf
+fonts/glyphicons-halflings-regular.woff
 img/chevron-down.png
 img/chevron-up.png
 img/default.jpg
 js/bundle.js
 res/ciqual.json
-fonts/glyphicons-halflings-regular.eot
-fonts/glyphicons-halflings-regular.svg
-fonts/glyphicons-halflings-regular.ttf
-fonts/glyphicons-halflings-regular.woff
 
 
 NETWORK:
@@ -24,4 +24,4 @@ NETWORK:
 FALLBACK:
 img/default.jpg
 
-# hash: 7e6a07b7b6218d617d5bec28c1ce9154a12615a28a118fe76e47f90bbca08924
+# hash: b1499492b7e781e1a2769a03e070db0fd236bb3694386ee33f455b74b93c5e93

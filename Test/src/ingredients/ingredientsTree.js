@@ -30,29 +30,34 @@ var TreeNode = react.createClass( {
 
 var IngredientsTree = react.createClass( {
 
-    renderItemTree: function ( items ) {
+    getInitialState: function () {
+        return { startItem: 0, scroll: { top: 0, oHeight: 400 } };    
+    },
 
+    renderItemTree: function ( items ) {
+        var tmp = items;
         var ul = react.DOM.div();
         if ( !_.isEmpty( items ) ) {
             if (this.state && this.state.scroll) {
                 var itemSize = 20;
-                var startItem = Math.floor( this.state.scroll.top / 20 );
-                var endItem = Math.ceil( ( this.state.scroll.top + this.state.scroll.oHeight ) / 20);
-                console.log('slice', startItem, endItem);
-                items  = items.slice(startItem, endItem);
+                var startItem = this.state.startItem;
+                var endItem = startItem + Math.ceil(this.state.scroll.oHeight / 20);
+                console.log('slice:', startItem, endItem);
+                tmp = items.slice(startItem, endItem);
             }
-            var groups = _.groupBy(items, function ( it ) { return it.category; });
+            var groups = _.groupBy(tmp, function ( it ) { return it.category; });
             lis = _.map( groups, function ( val, key ) {
-                return TreeNode( {
+                return TreeNode({
                     key: key, items: val,
                     itemTemplate: react.DOM.li,
                     onSelectItem: this.onSelectItem
                 });
-            }, this );
-            ul = react.DOM.ul( {
+            }, this);
+            ul = react.DOM.ul({
                 className: this.props.className + " ingredients-tree",
                 onScroll: this._onScroll
-            }, lis );
+            }, lis);
+            console.log('items:', items.length * 20, 'tmp:', tmp.length * 20);
         }
         return ul;
     },
@@ -63,25 +68,17 @@ var IngredientsTree = react.createClass( {
 
     _onScroll: function ( e ) {
         var node = this.getDOMNode();
-        this.setState( { scroll: { top: node.scrollTop, height: node.scrollHeight, oHeight: node.offsetHeight } });
+        var offset =  node.scrollTop - this.state.scroll.top;
+        var startItem = this.state.startItem + Math.floor(offset/20);
+        if (startItem < 0) {
+            startItem = 0;    
+        }
+        this.setState( { startItem: startItem, scroll: { top: node.scrollTop, oHeight: node.offsetHeight } });
         console.log( 'scroll_scrollTop:', node.scrollTop );
         console.log( 'scroll_scrollHeight:', node.scrollHeight );
         console.log( 'scroll_offsetHeight:', node.offsetHeight );
-        console.log( 'scroll', e );
-    },
-
-    componentWillUpdate: function () {
-        var node = this.getDOMNode();
-        console.log( 'will_scrollTop:', node.scrollTop );
-        console.log( 'will_scrollHeight:', node.scrollHeight );
-        console.log( 'will_offsetHeight:', node.offsetHeight );
-    },
-
-    componentDidUpdate: function () {
-        var node = this.getDOMNode();
-        console.log( 'did_scrollTop:', node.scrollTop );
-        console.log( 'did_scrollHeight:', node.scrollHeight );
-        console.log( 'did_offsetHeight:', node.offsetHeight );
+        console.log( 'scroll', e.nativeEvent );
+        e.preventDefault();
     },
 
     render: function () {
