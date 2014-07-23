@@ -37,14 +37,16 @@ var IngredientsTree = react.createClass( {
     renderItemTree: function ( items ) {
         var tmp = items;
         var ul = react.DOM.div();
-        if ( !_.isEmpty( items ) ) {
-            if (this.state && this.state.scroll) {
-                var itemSize = 20;
-                var startItem = this.state.startItem;
-                var endItem = startItem + Math.ceil(this.state.scroll.oHeight / 20);
-                console.log('slice:', startItem, endItem);
-                tmp = items.slice(startItem, endItem);
-            }
+        if (!_.isEmpty(items)) {
+            var itemsLen = items.length + _.size(_.groupBy(items, function (it) { return it.category; }));
+            var itemSize = 20;
+            var startItem = Math.floor(this.state.scroll.top / 20);
+            var endItem = Math.min(startItem + Math.ceil(this.state.scroll.oHeight / 20), itemsLen);
+            console.log('slice:', startItem, endItem);
+            tmp = items.slice(startItem, endItem);
+            var liBefore = react.DOM.li({ style: { height: startItem * 20 } });
+            var liAfter = react.DOM.li({ style: { height: (itemsLen - endItem) * 20 } });
+            console.log('before:', startItem * 20, 'after:', (itemsLen - endItem) * 20);
             var groups = _.groupBy(tmp, function ( it ) { return it.category; });
             lis = _.map( groups, function ( val, key ) {
                 return TreeNode({
@@ -56,8 +58,8 @@ var IngredientsTree = react.createClass( {
             ul = react.DOM.ul({
                 className: this.props.className + " ingredients-tree",
                 onScroll: this._onScroll
-            }, lis);
-            console.log('items:', items.length * 20, 'tmp:', tmp.length * 20);
+            }, [liBefore, lis, liAfter]);
+            console.log('items:', items.length, 'tmp:', tmp.length);
         }
         return ul;
     },
@@ -66,14 +68,9 @@ var IngredientsTree = react.createClass( {
         this.props.onSelectItem( it );
     },
 
-    _onScroll: function ( e ) {
+    _onScroll: function (e) {
         var node = this.getDOMNode();
-        var offset =  node.scrollTop - this.state.scroll.top;
-        var startItem = this.state.startItem + Math.floor(offset/20);
-        if (startItem < 0) {
-            startItem = 0;    
-        }
-        this.setState( { startItem: startItem, scroll: { top: node.scrollTop, oHeight: node.offsetHeight } });
+        this.setState( { scroll: { top: node.scrollTop, oHeight: node.offsetHeight } });
         console.log( 'scroll_scrollTop:', node.scrollTop );
         console.log( 'scroll_scrollHeight:', node.scrollHeight );
         console.log( 'scroll_offsetHeight:', node.offsetHeight );
