@@ -31,7 +31,7 @@ var TreeNode = react.createClass({
 var IngredientsTree = react.createClass({
     
     getInitialState: function () {
-        return { startItem: 0, scroll: { top: 0, oHeight: 400 } };
+        return { startItem: 0, scroll: { top: 0, oHeight: 340 } };
     },
     
     renderItemTree: function (items) {
@@ -40,13 +40,13 @@ var IngredientsTree = react.createClass({
         if (!_.isEmpty(items)) {
             var itemsLen = items.length + _.size(_.groupBy(items, function (it) { return it.category; }));
             var itemSize = 20;
-            var startItem = Math.floor(this.state.scroll.top / 20);
-            var endItem = Math.min(startItem + Math.ceil(this.state.scroll.oHeight / 20), itemsLen);
+            var startItem = Math.floor(this.state.scroll.top / itemSize);
+            var endItem = Math.min(startItem + Math.ceil(this.state.scroll.oHeight / itemSize), itemsLen);
             console.log('slice:', startItem, endItem);
             tmp = items.slice(startItem, endItem);
-            var liBefore = react.DOM.li({ style: { height: startItem * 20 } });
-            var liAfter = react.DOM.li({ style: { height: (itemsLen - endItem) * 20 } });
-            console.log('before:', startItem * 20, 'after:', (itemsLen - endItem) * 20);
+            var liBefore = react.DOM.div({ style: { height: startItem * itemSize } });
+            var liAfter = react.DOM.div({ style: { height: (itemsLen - endItem) * itemSize } });
+            console.log('before:', startItem * itemSize, 'after:', (itemsLen - endItem) * itemSize);
             var groups = _.groupBy(tmp, function (it) { return it.category; });
             lis = _.map(groups, function (val, key) {
                 return TreeNode({
