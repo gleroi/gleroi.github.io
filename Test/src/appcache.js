@@ -8,23 +8,23 @@ var UPDATE_EVENT = 'UPDATE_EVENT';
 
 var appCache = merge(EventEmitter.prototype, {
     onUpdateReady: function () {
-        this.emit(UPDATE_EVENT, { state: 'update ready'});
+        this.emit(UPDATE_EVENT, { state: 'update ready' });
     },
-
+    
     onChecking: function () {
-        this.emit(UPDATE_EVENT, { state: 'checking'});
+        this.emit(UPDATE_EVENT, { state: 'checking' });
     },
-
+    
     onNoUpdate: function () {
         this.emit(UPDATE_EVENT, { state: 'no update' });
     },
-
+    
     addEventListener: function (callback) {
         this.on(UPDATE_EVENT, callback);
     },
-
+    
     removeEventListener: function (callback) {
-        this.removeListener(UPDATE_EVENT, callback);    
+        this.removeListener(UPDATE_EVENT, callback);
     }
 });
 
@@ -40,7 +40,7 @@ appDispatcher.register(function (e) {
         default:
             console.log('appCache does not know event:', e);
     }
-
+    
     return true;
 });
 

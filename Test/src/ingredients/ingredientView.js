@@ -3,10 +3,10 @@ var bs = require('react-bootstrap');
 
 var IngredientView = react.createClass({
     render: function () {
-        var item = this.props.item;  
+        var item = this.props.item;
         var fields = [];
         var header = 'No item selected';
-
+        
         if (item) {
             for (var field in item) {
                 fields.push(bs.Row(null, [
@@ -17,7 +17,7 @@ var IngredientView = react.createClass({
             header = react.DOM.h1(null, item.name);
         }
         else {
-            fields.push(react.DOM.div(null, [header]));    
+            fields.push(react.DOM.div(null, [header]));
         }
         return bs.Panel({
             bsStyle: 'primary',

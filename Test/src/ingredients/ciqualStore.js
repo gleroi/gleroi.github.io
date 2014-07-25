@@ -2,7 +2,7 @@
 var EventEmitter = require('events').EventEmitter;
 var dispatcher = require('../appDispatcher');
 
-function CiqualStore (){
+function CiqualStore() {
     this.items = [];
     this.filteredItems = [];
     this.selectedItem = null;
@@ -14,15 +14,15 @@ CiqualStore.prototype.initialize = function () {
     var self = this;
     $.get(window.location.pathname + 'res/ciqual.json',
         function (res) {
-            self.items = res;
-            self.emit('change');
-        }, 'json');
+        self.items = res;
+        self.emit('change');
+    }, 'json');
 };
 
 CiqualStore.prototype.getItems = function () {
     if (this.filteredItems === null)
         this.filteredItems = this.items;
-    return this.filteredItems;    
+    return this.filteredItems;
 };
 
 CiqualStore.prototype.filterItems = function (value) {
@@ -30,7 +30,7 @@ CiqualStore.prototype.filterItems = function (value) {
         this.filteredItems = this.items.filter(function (it) { return it.name.toLowerCase().indexOf(value) !== -1; });
     }
     else {
-        this.filteredItems = [];    
+        this.filteredItems = [];
     }
     this.emit('change');
 };
@@ -50,7 +50,7 @@ CiqualStore.prototype.selectItem = function (itemId) {
 };
 
 CiqualStore.prototype.getSelectedItem = function () {
-    return this.selectedItem;    
+    return this.selectedItem;
 };
 
 var store = new CiqualStore();

@@ -17,25 +17,25 @@ var renameMap = [
 ];
 
 var rows = [];
-csv.fromPath(filepath, { 
-        delimiter: ';',
-        headers: true
-    })
+csv.fromPath(filepath, {
+    delimiter: ';',
+    headers: true
+})
     .on('record', function (data) {
-        renameMap.forEach(function (pair) {
-            rename(data, pair[0], pair[1]);
-        });
-        rows.push(data);
-    })
-    .on('end', function () {
-        console.log('done');
-        save();
+    renameMap.forEach(function (pair) {
+        rename(data, pair[0], pair[1]);
     });
+    rows.push(data);
+})
+    .on('end', function () {
+    console.log('done');
+    save();
+});
 
 function save() {
     fs.writeFile('public/res/ciqual.json', JSON.stringify(rows, null, 4), function (err) {
-        if (err) { 
-            console.log('error : ', err); 
+        if (err) {
+            console.log('error : ', err);
         }
         else {
             console.log('done writing');
