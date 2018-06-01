@@ -11,13 +11,13 @@ body {
   background-size: 20vw;
 }
 
-a {
+a, dt {
   color: #588b3e;
   font-weight: bold;
   text-decoration: none;
 }
 
-a:hover {
+a:hover, dt:hover {
   text-decoration: underline;
 }
 
