@@ -46,4 +46,15 @@ section {
 section p {
   text-align: justify;
 }
+
+.contact-list {
+  display: grid;
+  grid-template-columns: 0.1fr 0.5fr 1fr;
+  grid-gap: 1em;
+  max-width: 13em;
+}
+
+.contact-list div {
+  grid-row: 1;
+}
 /*# sourceMappingURL=style.css.map */
