@@ -54,11 +54,16 @@ section {
     grid-template-columns: 1em 0.5fr 1fr;
     grid-gap: 0.5em;
     max-width: 13em;
-    div {
-        grid-row: 1;
-    }
 
     i {
         color: #999;
+        grid-column: 1;
+    }
+    a {
+        grid-column: 2;
+    }
+    span {
+        font-style: italic;
+        grid-column: 3;
     }
 }

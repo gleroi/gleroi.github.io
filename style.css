@@ -53,11 +53,17 @@ section p {
   max-width: 13em;
 }
 
-.contact-list div {
-  grid-row: 1;
-}
-
 .contact-list i {
   color: #999;
+  grid-column: 1;
+}
+
+.contact-list a {
+  grid-column: 2;
+}
+
+.contact-list span {
+  font-style: italic;
+  grid-column: 3;
 }
 /*# sourceMappingURL=style.css.map */
