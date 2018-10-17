@@ -20,8 +20,10 @@ I have some expertises in .NET frameworks (WPF, ASP.NET MVC), and more recently 
 [horizontal]
 icon:envelope-square[size=2x]::
 mailto:leroi.g@gmail.com[leroi.g] @ gmail
+
 icon:github-square[size=2x]::
 http://github.com/gleroi[gleroi] @ github
+
 icon:twitter-square[size=2x]::  
 https://twitter.com/gleroi[gleroi] @ twitter
 
