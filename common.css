@@ -32,7 +32,15 @@ body {
   background-color: #fff;
 }
 
-a, dt {
+@media screen and (max-width: 82em) {
+  body {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}
+
+a,
+dt {
   color: #588b3e;
   font-weight: bold;
   text-decoration: none;
