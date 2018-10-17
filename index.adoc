@@ -1,0 +1,49 @@
+= Log
+:stylesheet: style.css
+:linkcss:
+:nofooter:
+:icons: font
+
+== About
+
+I am Guillaume, a developer in Lyon (France). I am currently working for
+http://www.keyconsulting.fr[Key Consulting].
+
+My professional interests are solving problems by working closely with our users, analysing the various solutions, evaluating the technical needs and merits of a solution and finally implementing it. And then do it again !
+
+I have worked in various domains, especially for energy companies (Engie, Enedis), quality management company (Trigo) and some public institutions (French ministry of Ecology, Agency of Ile de France parkland).
+
+I have some expertises in .NET frameworks (WPF, ASP.NET MVC), and more recently Go.
+
+== Contact
+
+[horizontal]
+icon:envelope-square[size=2x]::
+mailto:leroi.g@gmail.com[leroi.g] @ gmail
+icon:github-square[size=2x]::
+http://github.com/gleroi[gleroi] @ github
+icon:twitter-square[size=2x]::  
+https://twitter.com/gleroi[gleroi] @ twitter
+
+== Projects
+
+Here is a list of personal projects:
+
+link:http://github.com/gleroi/keywrap[keywrap]::
+implements RFC 3394 "AES Key Wrap algorithm" in Go.
+
+link:http://github.com/gleroi/wbxml[wbxml]::
+implements WBXML encoding and decoding in Go.
+
+link:http://github.com/gleroi/FontDisplay[FontDisplay]::
+display and search font glyph.
+
+link:http://github.com/gleroi/WallPaperSeven[WallPaperSeven]::
+setup wallpapers on multi-monitors for Windows.
+
+link:ciqual/public[Ingredients (ciqual)]::
+search and select food from the ciqual index.
+
+link:tkt[Tkt (Tickets répartis)]::
+defines tickets prices and quantity, and compute a set of ticket to give
+to minimize money to add.

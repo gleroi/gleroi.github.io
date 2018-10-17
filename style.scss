@@ -1,56 +1,5 @@
 @import "./common.scss";
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1em; 
-    margin: 2em 1em;
-    color: #333;
-    background: no-repeat url("flower.jpg");
-    background-origin: border-box;
-    background-position-x: right;
-    background-position-y: top;
-    background-size: 10em;
-}
-
-a, dt {
-    color: $green;
-    font-weight: bold;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-        color: $blue;
-    }
-}
-
-li {
-    list-style-position: outside;
-}
-
-h1, h2 {
-    font-family: 'Montserrat', 'Times New Roman', serif;
-}
-
-h1 {
-    font-size: 3em;
-    font-variant: small-caps;
-}
-
-h2 {
-    font-size: 2em;
-    border-bottom: 1px solid $orange;
-}
-
-section {
-    max-width: 80em;
-    margin-left: auto;
-    margin-right: auto;
-
-    p {
-        text-align: justify;
-    }
-}
-
 .contact-list {
     display: grid;
     grid-template-columns: 1em 0.5fr 1fr;

@@ -17,24 +17,30 @@
 }
 
 body {
-  max-width: 80em;
-  margin: 2em 1em;
-  margin-left: auto;
-  margin-right: auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1em;
+  margin: 2em 1em;
+  max-width: 80em;
+  margin-left: auto;
+  margin-right: auto;
   color: #333;
+  background: no-repeat url("flower.jpg");
+  background-origin: border-box;
+  background-position-x: right;
+  background-position-y: top;
+  background-size: 10em;
   background-color: #fff;
 }
 
-#header .details {
-  display: none;
-}
-
-.hdlist1 {
+a, dt {
   color: #588b3e;
   font-weight: bold;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #5fbaa7;
 }
 
 h1,
@@ -62,6 +68,24 @@ h3 {
 
 h4 {
   font-size: 1em;
+}
+
+li {
+  list-style-position: outside;
+}
+
+p {
+  text-align: justify;
+}
+
+#header .details {
+  display: none;
+}
+
+.hdlist1 {
+  color: #588b3e;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 dd {
