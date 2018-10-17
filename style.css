@@ -36,6 +36,7 @@ a, dt {
 
 a:hover, dt:hover {
   text-decoration: underline;
+  color: #5fbaa7;
 }
 
 li {

@@ -19,6 +19,7 @@ a, dt {
 
     &:hover {
         text-decoration: underline;
+        color: $blue;
     }
 }
 
@@ -63,6 +64,7 @@ section {
     a {
         grid-column: 2;
     }
+    
     span {
         font-style: italic;
         grid-column: 3;
