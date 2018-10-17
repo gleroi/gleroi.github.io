@@ -1,0 +1,351 @@
+= Curriculum Vitae
+Guillaume Leroi
+v3.3, 2018-10-16
+:icons: font
+:stylesheet: cv.css
+:nofooter:
+
+== Rôles
+
+[horizontal]
+Lead développeur .NET:: -- 10 ans d'expérience
+Développeur Go:: -- 2 ans d'expériences
+Développeur Android:: -- 1 an d'expérience
+
+
+== Compétences projets
+
+* Architecture et conception technique : définition de l’infrastructure matérielle, analyse
+  et conception logicielle
+* Développement : analyse, spécifications, réalisation, tests unitaires, automatisation des builds et déploiements
+* Tests : rédaction, automatisation de l’exécution des tests, génération des rapports d’exécution
+* Support
+
+
+== Compétences techniques
+
+[horizontal]
+Langages de Développement::
+*C#*, F#, *Go*, Java (Android, J2SE), JavaScript, Typescript, Shell (sh, bash)
+
+SGBD::
+Oracle 9i-10g, SQL Server 2005-2008, PostgreSQL 9
+
+Normes/Méthodes::
+.Net Design Guidelines (fxCop), Design Pattern, UML, TDD
+
+Composants .Net::
+Winforms, WPF, Infragistics (8.2, 11), Workflow Foundation 3, NHibernate, Entity Framework 5 , ADO.NET
+
+Web::
+*ASP.NET* 4.5 (MVC, WebAPI, WebForms), JavaScript (Node.js, React.js), Symfony 1.4
+
+Communication::	
+ASP.NET WebAPI, ASMX Web Services, WCF 4, MQTT
+
+Développement::
+Visual Studio (2008-2017), Eclipse, VS Code, *Git*, SVN, CVS
+
+Tests / Intégration Continue::
+Nunit/xUnit, SpecFlow, MSTest, Jenkins
+
+Outils divers::
+fxCop, Code Contract 4, StyleCop, SandCastle, Sonar
+
+Systèmes d’exploitation::
+Windows (7-10), Linux (Debian), Windows Server 2008
+
+Technologies mobiles::
+Android
+
+Langues::
+Anglais: Lu, écrit, parlé
+
+
+== Etudes et diplômes
+
+[horizontal]
+2008:: 
+Diplôme d'ingénieur de l'EPITA (Le Kremlin-Bicêtre) +
+Option calcul scientifique et imagerie
+
+
+== Expériences professionnelles
+
+=== OSAK: Outils de Simulation Autour du K
+icon:group[] *Lead Développeur @ ENEDIS (Lyon), pôle HyperPERF* +
+icon:calendar[] _De janvier 2017 à aujourd'hui_
+
+Au sein d’une équipe de 10 personnes, participation à la conception-réalisation de l’application OSAK. 
+
+OSAK est une collection de modules permettant de simuler l’activité de plusieurs centaines de compteurs LINKY, selon des scénarios métiers définis par les besoins de tests de conformité ou de performance des équipes gérant les concentrateurs (mini-ordinateurs présents dans les postes de transformation HT/BT collectant et relayant les informations des compteurs vers le SI national d'Enedis). 
+
+Puis participation à la définition et l’exécution des scénarios/campagnes de tests et performances des concentrateurs, et des logiciels Enedis. Analyse des données et mesures générées et participation à la rédaction des rapports. 
+
+Module Proxy CPL G3::
+_Simulation du trafic CPL générés par les compteurs_
+
+* Développement et intégration avec le module d’administration
+* Recette du module, identification de plusieurs _deadlocks_ et développement des correctifs et des tests unitaires
+
+Module DLMS::
+_Simulation des données métiers fournis par les compteurs_
+
+* Développement des objets et méthodes DLMS/COSEM du modèles de données définies par LINKY
+* Développement et intégration avec le module d'administration
+
+Module SI::
+_Simulation de l'accueil du SI Enedis pour les concentrateurs, envoi des ordres de simulation, réception des comptes rendus d'exécution_
+
+* Développement en _Go_ d'un module compatible avec la version 1 de l'accueil, basée sur le protocole OMADS et le format de données WBXML.
+* Développement en _Java_, d'un module compatible avec la version 2 de l'accueil, basée sur le protocole HTTPS et API REST.
+* Pour les deux versions: 
+** remontée des informations des compte-rendus vers InfluxDB, 
+** mesures des performances d'exécution d'un ordre du concentrateur
+
+Module administration:: 
+_Pilotage des autres modules, interface utilisateur d'OSAK_
+
+* Analyse du besoin, prototypage et sélection de la solution technique
+* Mise en oeuvre de la solution proposée : _node.js_ & _React_
+* Réalisation des écrans d’interactions avec les différents modules
+
+Module monitoring::
+_Monitoring du concentrateur & de ses logiciels, collecte des données, analyse et visualisation de ces données_
+
+* Analyse du besoin, sélection d’une solution technique interopérable entre Windows (x86) et Linux (arm)
+* Monitoring avec _telegraf_ sur le concentrateur, transmission des données vers _InfluxDB_, visualisation avec _chronograf_
+* Développement d’outils permettant la communication entre le module d’administration et le firmware du concentrateur au travers d’un broker MQTT.
+* Configuration & packaging de la solution, intégration continue avec Jenkins, déploiement du package vers Maven.
+
+Autres::
+_Automatisation des tâches de configuration, de mises en place de la simulation répétitives ou longues_
+
+* Développement d'outils utilitaires en _Go_ pour la configuration de la grappe compteurs,
+* Envoi d'ordres templatés pour tous les compteurs à interval régulier
+
+L’ensemble de ces modules peuvent être piloté/administré par l’échange de messages sur un bus MQTT.
+
+Environnement technique::
+Go, Java 8, Spring framework 4, JUnit 4, Mockito, Paho MQTT 3, IntelliJ & Eclipse, Electron, React, Bootstrap, Linux (arm), Bash
+
+
+=== Expresso: maintenance experte des compteurs et concentrateurs
+icon:group[] *Lead Développeur @ ENEDIS (Lyon), pôle Mobilité* +
+icon:calendar[] _De février 2015 à décembre 2016_
+
+Au sein d'une équipe de 20 personnes, participation à la réalisation d'une application de maintenance des compteurs et concentrateurs pour les techniciens experts d'Enedis. Cette application s'appuie sur deux librairies développées par la même équipe pour communiquer avec les compteurs (LMC) et concentrateurs (LMK). L'application s'exécute sur tablette tactile Windows, durcie.
+
+Les tablettes sont connectées au SI Enedis afin de consulter le dossier de demande d'expertise, qui contient des informations sur le réseau électrique a analyser, les compteurs (leur type, marque, emplacement, informations clients) et de consulter ces informations sur une carte (module cartographique), pour mieux s'orienter et identifier les compteurs et optimiser les interventions.
+
+Les tablettes sont aussi connectées a un ensemble d'outils nécessaires a l'analyse et au diagnostic: analyseur de spectre, modem CPL pour observer les messages échangés sur le réseau électrique.
+
+Application Expresso::
+_Assiste les techniciens experts d'ERDF lors des interventions sur le terrain pour analyser et diagnostiquer les problèmes rencontrés par le réseau CPL, les compteurs et concentateurs Linky_
+
+* Développement de nouvelles fonctionnalités, correction des anomalies, développement des tests
+* Refonte, développement et optimisation du module cartographique
+* Optimisation du module d'analyse du signal CPL, développement d'un système permettant à l'analyseur de spectre de communiquer par WIFI, pour faciliter les interventions des techniciens
+* Conception et développement du module d'analyse des données fournies par le modem CPL G3
+* Participation aux réunions de conception et chiffrage avec le PO (rôle de référent technique)
+
+
+Linky Mobile Koncentrateur (LMK)::
+_Gère l'envoi des ordres au concentrateur, la reception des comptes-rendus d'exécution au travers de l'interface ethernet local du concentateur_
+
+* Refonte de LMK pour faciliter les développements de nouvelles fonctionnalités et la mise en place de test unitaires et d'intégrations.
+* Mise en place du système de spécification par les tests basé sur la méthodologie BDD (Behavior Driven Development) avec NUnit et Specflow.
+* Développement et adaptation de l'authentification mutuelle par échange de certificats
+
+Environnement technique::
+Tablettes, Visual Studio 2013&2015, .NET 4.5, Windows 8, nFluent (tests unitaires), Jenkins, Specflow, WPF, C#, SQL Server, Entity Framework6, WCF, GIT, Scrum, TDD, BDD
+
+
+=== AntiFOG: système de gestion de TRIGO
+icon:group[] *Lead Développeur @ Key Consulting (Lyon), +
+pour TRIGO* +
+icon:calendar[] _De janvier 2013 à janvier 2015_
+
+Dans une équipe de 10 ingénieurs, au forfait (2000 h.j), réalisation d'une application de gestion des activités de l'entreprise TRIGO.
+
+TRIGO est une société de services dans le domaine de l’inspection et de l’ingénierie qualité, en mode préventif ou correctif. Elle permet à ses clients de garantir la conformité et la qualité des pièces et composants impliqués dans la fabrication de leurs produits  (automobiles,  avions, …)
+
+Afin de répondre aux besoins de ses clients dans un contexte d’expansion mondiale, TRIGO a lancé la réécriture de l’application AntiFOG (WinDEV) en technologie *ASP.NET* et HTML 5. 
+L’objectif de ce projet est de faire de AntiFOG un élément capital de la stratégie de TRIGO et de permettre un déploiement sur la plateforme cloud Microsoft *Azure*.
+
+Conception:: 
+* Analyse de l’existant et des prérequis à la conception d’une application ASP.NET reposant   sur la plateforme Cloud Windows Azure
+* Définition de l’architecture physique et logicielle
+* Définition des normes de développement du projet, mise en place des outils de contrôle      qualité (FxCop, Microsoft Code Analysis)
+* Rédaction du DAT, du manuel développeur
+
+Développement::
+* Initialisation du projet, initialisation des environnements de développement
+* Mise en place des outils et script d’intégration continue (PowerShell et Jenkins)
+* Développement et mise en place d’un outil d’extraction des tests Specflow sous forme de     spécifications HTML
+
+* Définition des bonnes pratiques : 
+** Définition des couches et de leur responsabilités et transfert de compétence aux autres     développeurs
+** Mise en place de différentes stratégies de tests : unitaires, tests "behavior oriented"     avec SpecFlow, tests d’acceptation et d’intégration (Selenium) 
+
+* Développement de composants réutilisables dans l’application :
+** Développement d’un système de pagination, tri et filtrage, faisant interface avec un        composant « tableau » HTML/js (Datatables.net) et Entity Framework
+** Développement du système d’autorisations et permissions, reposant sur des claims (WIF),     intégration avec ASP.NET
+** Développement d’un système de traduction des textes de l’application reposant sur GNU       xgettext et Vernacular, intégration avec ASP.NET
+
+* Support aux développeurs
+* Identification et résolution des problèmes de performances rencontrés sur l’application :   contention sur la session utilisateur, performances des requêtes LINQ Entity Framework
+
+Installation et déploiement::
+* Définition et construction de l’infrastructure sur Microsoft Azure
+* Intégration des serveurs Azure avec l’Active Directory et le VPN du client
+* Rédaction du manuel d’installation et d’exploitation
+* Automatisation des procédures de déploiement de l’application Web
+* Mise en place et configuration des moyens de monitoring Azure
+
+
+Environnement technique:: 
+ASP.NET MVC4, .NET 4.5, Entity Framework 5, AutoMapper, AutoFac, NUnit, Specflow, Azure Web Role, Azure SQL Database, Azure VM, Azure Storage, Jenkins, git, Mantis
+
+
+=== TMA DR: tierce maintenance des Développements Rapides de GDF SUEZ
+icon:group[] *Lead Développeur @ Key Consulting (Paris), +
+pour GDF SUEZ -- Branche Energie Europe (Paris)* +
+icon:calendar[] _De août 2011 à août 2013_
+
+Dans une équipe de 4 à 7 personnes, au forfait, maintenance et refonte des applications dîtes _DR_ (Développement Rapide) pour la branche Energie Europe de GDF SUEZ à Paris. Les DR regroupent une trentaine d'applications couvrant les périmètres métiers comme les approvisionnements en électricité et en gaz, les calculs de rentabilité économiques, etc...
+
+
+Projet AMELIE:: 
+_Système d’optimisation du fonctionnement et de la maintenance des actifs de production d’énergie du Groupe_
+
+* Spécifications et développement des évolutions
+* Corrections des anomalies
+* Audit du code et nettoyage du code
+* Adaptation de l’application pour permettre l’exécution de plusieurs rapports en parallèle
+
+Projet DR:: 
+_Migration technologies et maintenance de près de 30 applications métiers différentes sur les pôles d’Optimisation Electricité, d’Approvisionnement Aval et la délégation Gestion Finance - RH_
+
+* Prise de connaissances auprès de l’ancien responsable de la TMA
+* Mise en place de l’infrastructure nécessaire au suivi et développement de 30 applications
+* Chiffrage et spécification des évolutions des applications VBA/Excel
+* Chiffrage, spécification et conception des nouvelles applications .NET, définition de       l’architecture et des bonnes pratiques à suivre sur les nouvelles applications
+* Réalisation d’une douzaine d’applications en WPF
+* Réalisation en WPF de composants réutilisables et d’une feuille de style correspondant à    la charte graphique de GDF SUEZ
+* Encadrement des développeurs sur les applications .NET et sur VBA/Excel
+* Rôle moteur au sein du projet en argumentant l’intérêt de la migration d’applications       VBA/Excel vers la plateforme .NET avec WPF
+
+Projet OSPIE:: 
+_Système de simulation de la gestion du portefeuille d’actifs électriques de la Branche Energie France, de calcul des indicateurs de risques financiers et macro-économiques associés et de test des stratégies de gestion des couvertures_
+
+* Aide à la définition de l’architecture de l’application
+* Support et apport d’expertise aux développeurs de l’application OSIPE
+* Participation à la résolution de certaines anomalies
+
+Environnement technique::
+C#, Infragistics, Winforms, WSS, WPF, .NET 3.5 et suivantes, ADO.Net, Entity Framework, NHibernate, VBA Excel, Visual Basic 6.0, VB.Net, ASP.Net, C#, Microsoft.Net, SQL, PL/SQL, Oracle, Mantis, Jenkins, Active Directory, MSTest, SQL, PL/SQL, Oracle 10g, SQL Server Compact, SVN
+
+
+=== Intranet collaboratif
+icon:group[] *Développeur @ Key Consulting (Paris), +
+pour Agence des Espaces Verts d'Île de France (Paris)* +
+icon:calendar[] _De février 2011 à juillet 2011_
+
+Dans une équipe de 2 personnes, au forfait, réalisation du portail intranet collaboratif de l’Agence, visant à développer la communication interne, l’échange et le partage d’informations au travers d’un accès unifié et sécurisé. Et permettant l'accès à diverses applications tierces via Single Sign-On (SSO).
+
+* Définition de l’architecture
+* Conception
+* Développement et tests
+* Recettes et mise en production
+* Maintenance
+* Formation des utilisateurs
+
+//-
+
+Environnement technique::	
+MOSS Sharepoint 2007, Sharepoint Designer, Infopath Foms Services, WebParts, Windows Wokflow Framework (WWF), Visual Studio .Net, SQL Server 2008, Serveur IIS, Git, Mantis, PowerShell
+
+ 
+=== Applications mobiles et réalite augmentée
+icon:group[] *Développeur @ Key Consulting (Paris), +
+pour EDF R&D (Paris-Clamart)* +
+icon:calendar[] _De avril 2010 à janvier 2011_
+
+Dans une équipe de 2 personnes, au forfait, réalisation de deux prototypes sur smartphone *Android* afin d'évaluer les capacités techniques des plateformes et les possibilités d'utilisation de la réalité augmentée pour assister l'utilisateur.
+
+Le projet de réalité augmentée lancé par EDF consistant à déployer un outil embarqué sur des terminaux mobiles de type smartphone destiné à la population suivante :
+
+* Les techniciens EDF: information sur une borne, un pylône électrique, etc...
+* Les commerciaux EDF: Information sur les logements à visiter type équipement gaz et         électricité, consommation, etc...
+* Les clients EDF: recherche d’une agence
+
+//-
+
+Phase Etude de faisabilité::
+_Participation à l’étude comparative des différentes plateformes de téléphonie modernes afin de sélectionner la plateforme la plus adaptée pour le développement du prototype_
+
+* Compatibilité du téléphone avec la plateforme logicielle EDF
+* Présence et gestion des capteurs nécessaires sur le téléphone (caméra, accéléromètre, Bluetooth)
+* Evaluation de la facilité de développement et de déploiement de l’application, support du constructeur/éditeur
+* Disponibilité et accessibilité des téléphones de la plateforme
+
+Phase Prototypage::
+_Développement de deux applications prototypes_
+
+* Une application de réalité augmentée, utilisant la caméra et le GPS du téléphone, pour présenter une liste de points géographique au travers du champ de vision de la caméra
+* Une application d’échange de données avec les compteurs LINKY par Bluetooth, présentant les informations de consommation.
+
+Environnement technique::
+Java, Android 1.5 (API Camera, GPS, Accéléromètre…), XML, Algorithme de géolocalisation
+
+ 
+=== Extranet de la région Champagne-Ardenne
+icon:group[] *Développeur @ Key Consulting (Paris), +
+pour la Région Champagne-Ardennes (Châlons-en-Champagne)* +
+icon:calendar[] _De juin 2009 à mars 2010_
+
+Dans une équipe de 3 personnes, au forfait, réalisation du portail Sharepoint / Extranet favorisant le partage d’information entre la Région et l’ensemble des ses établissements d’enseignement et partenaires.
+
+Développement en SharePoint Designer::
+* Génération de formulaires
+* Corrections d’anomalies
+* Ajout de fonctionnalités
+
+Développement Windows Workflow et InfoPath::
+* Développement du processus de demande d’équipement / d’intervention :
+** Spécification et conception des écrans avec les utilisateurs
+** Implémentation et test du workflow
+* Support aux utilisateurs en phase de test
+
+Développement du filtre des documents métiers::
+* Utilisation des métadonnées pour filtrer plus facilement les documents pris en charge par   l’application
+* Ecriture d’un composant SharePoint en C#
+* Développement du filtre en JavaScript
+
+Environnment technique::
+MOSS, InfoPath, SharePoint Designer, C#, ASP.NET, SQL Server, JavaScript, Visual Studio, IIS, Windows Server
+
+
+=== CPAO: Conception assistée par ordinateur
+icon:group[] *Développeur @ Key Consulting (Paris), +
+pour Centre Scientifique et Technique du Bâtiment -- CSTB (Paris)* +
+icon:calendar[] _De août 2008 à mai 2009_
+
+Dans une équipe de 3 personnes, au forfait, participation au développement de l’application CPAO, application web de gestion et d’accumulation des connaissances pour le CSTB, outil d’aide à la décision et à l’optimisation du choix des matériaux grâce à la gestion de l’étude et de la simulation de leurs dégradations potentielles.
+
+Algorithmes métiers de l’application::
+_Construction, vérification et exécution de la simulation des dégradations subies par les matériaux composant l'objet de l'étude_
+
+* Implémentation des algorithmes fournis par le CSTB
+** Vérification de la validité de la structure de l’étude
+** Recherche de dégradation
+
+Maintenance corrective::
+_Prise en charge de la maintenance des différents modules de l’application_
+
+* Correction des bugs avec Mantis
+* Validation de la compatibilité avec Internet Explorer
+
+Environnement technique::	
+C# 2.0, framework MonoRail, Visual Studio 2005, SQL, SQL Server 2005, Nhibernate, ActiveRecord, NVelocity, XML, XSLT, Log4Net, Nunit, CVS, IIS
