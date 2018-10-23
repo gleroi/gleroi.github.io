@@ -105,18 +105,20 @@ ol {
   padding-left: 2em;
 }
 
+/*
 .timeline {
-  border-left: 1px dashed #ccc;
-  padding-left: 2em;
-  margin-left: -2em;
-}
+    border-left: 1px dashed #ccc;
+    padding-left: 2em;
+    margin-left: -2em;
 
-.timeline h3::before {
-  font-family: "Segoe UI";
-  font-size: 1em;
-  color: #ccc;
-  content: "\25CF";
-  padding-right: 24px;
-  margin-left: -40px;
+    h3::before {
+        font-family: "Segoe UI";
+        font-size: 1em;
+        color: #ccc;
+        content: "\25CF";
+        padding-right: 24px;
+        margin-left: -40px;
+    }
 }
+*/
 /*# sourceMappingURL=cv.css.map */
