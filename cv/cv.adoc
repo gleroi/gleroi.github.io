@@ -71,6 +71,7 @@ Diplôme d'ingénieur de l'EPITA (Le Kremlin-Bicêtre) +
 Option calcul scientifique et imagerie
 
 
+[.timeline]
 == Expériences professionnelles
 
 === OSAK: Outils de Simulation Autour du K
@@ -237,7 +238,7 @@ _Migration technologies et maintenance de près de 30 applications métiers diff
 * Encadrement des développeurs sur les applications .NET et sur VBA/Excel
 * Rôle moteur au sein du projet en argumentant l’intérêt de la migration d’applications       VBA/Excel vers la plateforme .NET avec WPF
 
-Projet OSPIE:: 
+Projet OSIPE:: 
 _Système de simulation de la gestion du portefeuille d’actifs électriques de la Branche Energie France, de calcul des indicateurs de risques financiers et macro-économiques associés et de test des stratégies de gestion des couvertures_
 
 * Aide à la définition de l’architecture de l’application

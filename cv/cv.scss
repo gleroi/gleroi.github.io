@@ -18,3 +18,18 @@ ul,
 ol {
     padding-left: 2em;
 }
+
+.timeline {
+    border-left: 1px dashed #ccc;
+    padding-left: 3em;
+    margin-left: -3em;
+
+    h3::before {
+        font-family: "Segoe UI";
+        font-size: 1em;
+        color: #ccc;
+        content: "\25CF";
+        padding-right: 40px;
+        margin-left: -56px;
+    }
+}
