@@ -107,8 +107,8 @@ ol {
 
 .timeline {
   border-left: 1px dashed #ccc;
-  padding-left: 3em;
-  margin-left: -3em;
+  padding-left: 2em;
+  margin-left: -2em;
 }
 
 .timeline h3::before {
@@ -116,7 +116,7 @@ ol {
   font-size: 1em;
   color: #ccc;
   content: "\25CF";
-  padding-right: 40px;
-  margin-left: -56px;
+  padding-right: 24px;
+  margin-left: -40px;
 }
 /*# sourceMappingURL=cv.css.map */
