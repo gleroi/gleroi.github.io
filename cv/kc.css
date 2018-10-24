@@ -1,0 +1,105 @@
+body {
+  font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-size: 1em;
+  margin: 2em 1em;
+  max-width: 80em;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 82em) {
+  body {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+p {
+  text-align: justify;
+}
+
+#header h1 {
+  font-size: 3em;
+  color: #33333355;
+}
+
+h2 {
+  text-align: right;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  font-weight: bolder;
+  padding: 0.1em 0.2em 0.2em 0.2em;
+  background-color: #392152;
+  border-bottom: 0.15em solid #8193ca;
+}
+
+h3 {
+  color: #68488e;
+  font-size: 1.4em;
+  font-weight: bold;
+  border-bottom: 0.15em solid #8193ca;
+}
+
+.job-description {
+  color: #333399 !important;
+}
+
+.job-tech {
+  color: navy;
+}
+
+.job-tech .hdlist1 {
+  color: #000;
+  font-weight: bold;
+}
+
+.tech-skill {
+  color: #000;
+}
+
+.tech-skill .hdlist1 {
+  color: #68488e;
+  font-weight: bold;
+}
+
+.paragraph {
+  color: navy;
+  text-align: justify;
+  font-size: 1em;
+}
+
+ul,
+ol {
+  padding-left: 1.2em;
+}
+
+li {
+  list-style-position: outside;
+}
+
+.dlist,
+.hdlist,
+.ulist {
+  font-size: 0.95em;
+}
+
+.dlist dt,
+.dlist .hdlist1,
+.hdlist dt,
+.hdlist .hdlist1,
+.ulist dt,
+.ulist .hdlist1 {
+  font-size: 1em;
+}
+
+.dlist dd, .dlist li,
+.hdlist dd,
+.hdlist li,
+.ulist dd,
+.ulist li {
+  margin-left: 1.2em;
+}
+/*# sourceMappingURL=kc.css.map */

@@ -1,5 +1,4 @@
 @import "../common.scss";
-
 #header .details {
     display: none;
 }
@@ -35,3 +34,9 @@ ol {
     }
 }
 */
+
+@media print {
+    @page {
+        margin: 2cm;
+    }
+}

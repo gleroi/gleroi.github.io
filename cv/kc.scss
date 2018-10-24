@@ -1,0 +1,101 @@
+$purple_dark: rgb(57, 33, 82);
+$purple_light: rgb(104, 72, 142);
+$blue_job: rgb(51, 51, 153);
+$blue_text: rgb(0, 0, 128);
+$gray: rgb(129, 147, 202);
+
+body {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    margin: 2em 1em;
+    max-width: 80em;
+    margin-left: auto;
+    margin-right: auto;
+    color: #333;
+    background-color: #fff;
+}
+
+@media screen and (max-width: 82em) {
+    body {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+
+p {
+    text-align: justify;
+}
+
+#header {
+    h1 {
+        font-size: 3em;
+        color: #33333355;
+    }
+}
+
+h2 {
+    text-align: right;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.6em;
+    font-weight: bolder;
+    padding: 0.1em 0.2em 0.2em 0.2em;
+    background-color: $purple_dark;
+    border-bottom: 0.15em solid $gray;
+}
+
+h3 {
+    color: $purple_light;
+    font-size: 1.4em;
+    font-weight: bold;
+    border-bottom: 0.15em solid $gray;
+}
+
+.job-description {
+    color: $blue_job !important;
+}
+
+.job-tech {
+    color: $blue_text;
+    .hdlist1 {
+        color: #000;
+        font-weight: bold;
+    }
+}
+
+.tech-skill {
+    color: #000;
+    .hdlist1 {
+        color: $purple_light;
+        font-weight: bold;
+    }
+}
+
+.paragraph {
+    color: $blue_text;
+    text-align: justify;
+    font-size: 1em;
+}
+
+ul,
+ol {
+    padding-left: 1.2em;
+}
+
+li {
+    list-style-position: outside;
+}
+
+.dlist,
+.hdlist,
+.ulist {
+    font-size: 0.95em;
+
+    dt,
+    .hdlist1 {
+        font-size: 1em;
+    }
+    dd, li {
+        margin-left: 1.2em;
+    }
+}

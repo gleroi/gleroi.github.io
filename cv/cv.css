@@ -121,4 +121,9 @@ ol {
     }
 }
 */
+@media print {
+  @page {
+    margin: 2cm;
+  }
+}
 /*# sourceMappingURL=cv.css.map */

@@ -3,7 +3,7 @@ Guillaume Leroi
 v3.3, 2018-10-16
 :icons: font
 :linkcss:
-:stylesheet: cv.css
+:stylesheet: kc.css
 :nofooter:
 
 == Rôles
@@ -25,7 +25,7 @@ Développeur Android:: -- 1 an d'expérience
 
 == Compétences techniques
 
-[horizontal]
+[horizontal, role="tech-skill"]
 Langages de Développement::
 *C#*, F#, *Go*, Java (Android, J2SE), JavaScript, Typescript, Shell (sh, bash)
 
@@ -75,6 +75,8 @@ Option calcul scientifique et imagerie
 == Expériences professionnelles
 
 === OSAK: Outils de Simulation Autour du K
+
+[.job-description]
 icon:group[] *Lead Développeur @ ENEDIS (Lyon), pôle HyperPERF* +
 icon:calendar[] _De janvier 2017 à aujourd'hui_
 
@@ -83,6 +85,8 @@ Au sein d’une équipe de 10 personnes, participation à la conception-réalisa
 OSAK est une collection de modules permettant de simuler l’activité de plusieurs centaines de compteurs LINKY, selon des scénarios métiers définis par les besoins de tests de conformité ou de performance des équipes gérant les concentrateurs (mini-ordinateurs présents dans les postes de transformation HT/BT collectant et relayant les informations des compteurs vers le SI national d'Enedis). 
 
 Puis participation à la définition et l’exécution des scénarios/campagnes de tests et performances des concentrateurs, et des logiciels Enedis. Analyse des données et mesures générées et participation à la rédaction des rapports. 
+
+L’ensemble de ces modules peuvent être piloté/administré par l’échange de messages sur un bus MQTT.
 
 Module Proxy CPL G3::
 _Simulation du trafic CPL générés par les compteurs_
@@ -126,13 +130,14 @@ _Automatisation des tâches de configuration, de mises en place de la simulation
 * Développement d'outils utilitaires en _Go_ pour la configuration de la grappe compteurs,
 * Envoi d'ordres templatés pour tous les compteurs à interval régulier
 
-L’ensemble de ces modules peuvent être piloté/administré par l’échange de messages sur un bus MQTT.
-
+[horizontal, role="job-tech"]
 Environnement technique::
 Go, Java 8, Spring framework 4, JUnit 4, Mockito, Paho MQTT 3, IntelliJ & Eclipse, Electron, React, Bootstrap, Linux (arm), Bash
 
 
 === Expresso: maintenance experte des compteurs et concentrateurs
+
+[.job-description]
 icon:group[] *Lead Développeur @ ENEDIS (Lyon), pôle Mobilité* +
 icon:calendar[] _De février 2015 à décembre 2016_
 
@@ -159,11 +164,14 @@ _Gère l'envoi des ordres au concentrateur, la reception des comptes-rendus d'ex
 * Mise en place du système de spécification par les tests basé sur la méthodologie BDD (Behavior Driven Development) avec NUnit et Specflow.
 * Développement et adaptation de l'authentification mutuelle par échange de certificats
 
+[horizontal, role="job-tech"] 
 Environnement technique::
 Tablettes, Visual Studio 2013&2015, .NET 4.5, Windows 8, nFluent (tests unitaires), Jenkins, Specflow, WPF, C#, SQL Server, Entity Framework6, WCF, GIT, Scrum, TDD, BDD
 
 
 === AntiFOG: système de gestion de TRIGO
+
+[.job-description]
 icon:group[] *Lead Développeur @ Key Consulting (Lyon), +
 pour TRIGO* +
 icon:calendar[] _De janvier 2013 à janvier 2015_
@@ -206,11 +214,14 @@ Installation et déploiement::
 * Mise en place et configuration des moyens de monitoring Azure
 
 
+[horizontal, role="job-tech"] 
 Environnement technique:: 
 ASP.NET MVC4, .NET 4.5, Entity Framework 5, AutoMapper, AutoFac, NUnit, Specflow, Azure Web Role, Azure SQL Database, Azure VM, Azure Storage, Jenkins, git, Mantis
 
 
 === TMA DR: tierce maintenance des Développements Rapides de GDF SUEZ
+
+[.job-description]
 icon:group[] *Lead Développeur @ Key Consulting (Paris), +
 pour GDF SUEZ -- Branche Energie Europe (Paris)* +
 icon:calendar[] _De août 2011 à août 2013_
@@ -245,11 +256,14 @@ _Système de simulation de la gestion du portefeuille d’actifs électriques de
 * Support et apport d’expertise aux développeurs de l’application OSIPE
 * Participation à la résolution de certaines anomalies
 
+[horizontal, role="job-tech"] 
 Environnement technique::
 C#, Infragistics, Winforms, WSS, WPF, .NET 3.5 et suivantes, ADO.Net, Entity Framework, NHibernate, VBA Excel, Visual Basic 6.0, VB.Net, ASP.Net, C#, Microsoft.Net, SQL, PL/SQL, Oracle, Mantis, Jenkins, Active Directory, MSTest, SQL, PL/SQL, Oracle 10g, SQL Server Compact, SVN
 
 
 === Intranet collaboratif
+
+[.job-description]
 icon:group[] *Développeur @ Key Consulting (Paris), +
 pour Agence des Espaces Verts d'Île de France (Paris)* +
 icon:calendar[] _De février 2011 à juillet 2011_
@@ -265,11 +279,14 @@ Dans une équipe de 2 personnes, au forfait, réalisation du portail intranet co
 
 //-
 
+[horizontal, role="job-tech"]
 Environnement technique::	
 MOSS Sharepoint 2007, Sharepoint Designer, Infopath Foms Services, WebParts, Windows Wokflow Framework (WWF), Visual Studio .Net, SQL Server 2008, Serveur IIS, Git, Mantis, PowerShell
 
  
 === Applications mobiles et réalite augmentée
+
+[.job-description]
 icon:group[] *Développeur @ Key Consulting (Paris), +
 pour EDF R&D (Paris-Clamart)* +
 icon:calendar[] _De avril 2010 à janvier 2011_
@@ -298,11 +315,14 @@ _Développement de deux applications prototypes_
 * Une application de réalité augmentée, utilisant la caméra et le GPS du téléphone, pour présenter une liste de points géographique au travers du champ de vision de la caméra
 * Une application d’échange de données avec les compteurs LINKY par Bluetooth, présentant les informations de consommation.
 
+[horizontal, role="job-tech"] 
 Environnement technique::
 Java, Android 1.5 (API Camera, GPS, Accéléromètre…), XML, Algorithme de géolocalisation
 
  
 === Extranet de la région Champagne-Ardenne
+
+[.job-description]
 icon:group[] *Développeur @ Key Consulting (Paris), +
 pour la Région Champagne-Ardennes (Châlons-en-Champagne)* +
 icon:calendar[] _De juin 2009 à mars 2010_
@@ -325,11 +345,14 @@ Développement du filtre des documents métiers::
 * Ecriture d’un composant SharePoint en C#
 * Développement du filtre en JavaScript
 
-Environnment technique::
+[horizontal, role="job-tech"] 
+Environnement technique::
 MOSS, InfoPath, SharePoint Designer, C#, ASP.NET, SQL Server, JavaScript, Visual Studio, IIS, Windows Server
 
 
 === CPAO: Conception assistée par ordinateur
+
+[.job-description]
 icon:group[] *Développeur @ Key Consulting (Paris), +
 pour Centre Scientifique et Technique du Bâtiment -- CSTB (Paris)* +
 icon:calendar[] _De août 2008 à mai 2009_
@@ -349,5 +372,6 @@ _Prise en charge de la maintenance des différents modules de l’application_
 * Correction des bugs avec Mantis
 * Validation de la compatibilité avec Internet Explorer
 
+[horizontal, role="job-tech"]
 Environnement technique::	
 C# 2.0, framework MonoRail, Visual Studio 2005, SQL, SQL Server 2005, Nhibernate, ActiveRecord, NVelocity, XML, XSLT, Log4Net, Nunit, CVS, IIS
