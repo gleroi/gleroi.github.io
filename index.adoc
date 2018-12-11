@@ -18,6 +18,9 @@ I have some expertises in .NET frameworks (WPF, ASP.NET MVC), and more recently 
 == Contact
 
 [horizontal]
+icon:address-book[size=2x]::
+<<cv/cv.adoc, @ CV>>
+
 icon:envelope-square[size=2x]::
 mailto:leroi.g@gmail.com[leroi.g] @ gmail
 
