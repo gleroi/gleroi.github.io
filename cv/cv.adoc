@@ -40,7 +40,7 @@ Développeur Android:: -- 1 an d'expérience
 
 [horizontal, role="tech-skill"]
 Langages de Développement::
-*C#*, F#, *Go*, Java (Android, J2SE), JavaScript, Typescript, Shell (sh, bash)
+*C#*, *Go*, Java (Android, J2SE), JavaScript, Typescript, Shell (sh, bash)
 
 SGBD::
 Oracle 9i-10g, SQL Server 2005-2008, PostgreSQL 9
