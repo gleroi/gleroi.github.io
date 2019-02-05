@@ -1,10 +1,23 @@
 = Curriculum Vitae
-Guillaume Leroi
+Guillaume Leroi <guillaume@leroi.re>
 v3.3, 2018-10-16
 :icons: font
 :linkcss:
 :stylesheet: cv.css
+:pdf-style: theme.yml
 :nofooter:
+ifdef::backend-pdf[:notitle:]
+
+ifdef::backend-pdf[] 
+
+[discrete] 
+= {author}
+
+{email}
+
+06 75 80 48 10
+
+endif::[]
 
 == Rôles
 
