@@ -1,6 +1,7 @@
 = Curriculum Vitae
-Guillaume Leroi <guillaume@leroi.re>
+Guillaume Leroi
 v3.3, 2018-10-16
+:email: guillaume@leroi.re
 :icons: font
 :linkcss:
 :stylesheet: cv.css
@@ -13,19 +14,27 @@ ifdef::backend-pdf[]
 [discrete] 
 = {author}
 
-{email}
+[%autowidth, frame="none", grid="none", stripes="none", cols="^.^,<"]
+|===
 
-06 75 80 48 10
+| icon:envelope-o[] | {email}
+| icon:phone[]      | 06 75 80 48 10
+| icon:github[]     | https://github.com/gleroi[github.com/~gleroi]
+
+|===
 
 endif::[]
 
 == Rôles
 
-[horizontal]
-Lead développeur .NET:: -- 10 ans d'expérience
-Développeur Go:: -- 2 ans d'expériences
-Développeur Android:: -- 1 an d'expérience
+[%autowidth, frame="none", grid="none", stripes="none"]
+|===
 
+| [.hdlist1]*Lead développeur .NET* | -- 10 ans d'expérience
+| [.hdlist1]*Développeur Go*        | -- 2 ans d'expériences
+| [.hdlist1]*Développeur Android*   | -- 1 an d'expérience
+
+|===
 
 == Compétences projets
 
@@ -38,51 +47,57 @@ Développeur Android:: -- 1 an d'expérience
 
 == Compétences techniques
 
-[horizontal, role="tech-skill"]
-Langages de Développement::
-*C#*, *Go*, Java (Android, J2SE), JavaScript, Typescript, Shell (sh, bash)
+[%autowidth, frame="none", grid="none", stripes="none", cols=2]
+|===
 
-SGBD::
-Oracle 9i-10g, SQL Server 2005-2008, PostgreSQL 9
+| [.hdlist1]*Langages*
+| *C#*, *Go*, Java (Android, J2SE), JavaScript, Typescript, Shell (sh, bash)
 
-Normes/Méthodes::
-.Net Design Guidelines (fxCop), Design Pattern, UML, TDD
+| [.hdlist1]*SGBD*
+| Oracle 9i-10g, SQL Server 2005-2008, PostgreSQL 9
 
-Composants .Net::
-Winforms, WPF, Infragistics (8.2, 11), Workflow Foundation 3, NHibernate, Entity Framework 5 , ADO.NET
+| [.hdlist1]*Normes/Méthodes*
+| .Net Design Guidelines (fxCop), Design Pattern, UML, TDD, BDD
 
-Web::
-*ASP.NET* 4.5 (MVC, WebAPI, WebForms), JavaScript (Node.js, React.js), Symfony 1.4
+| [.hdlist1]*Composants .Net*
+| Winforms, WPF, Infragistics (8.2, 11), NHibernate, Entity Framework 5 , ADO.NET
 
-Communication::	
-ASP.NET WebAPI, ASMX Web Services, WCF 4, MQTT
+| [.hdlist1]*Web*
+| *ASP.NET* 4.5 (MVC, WebAPI, WebForms), JavaScript (Node.js, React.js), Symfony 1.4
 
-Développement::
-Visual Studio (2008-2017), Eclipse, VS Code, *Git*, SVN, CVS
+| [.hdlist1]*Communication*
+| ASP.NET WebAPI, ASMX Web Services, WCF 4, MQTT, grpc
 
-Tests / Intégration Continue::
-Nunit/xUnit, SpecFlow, MSTest, Jenkins
+| [.hdlist1]*Développement*
+| Visual Studio (2008-2017), Eclipse, VS Code, *Git*, SVN, CVS
 
-Outils divers::
-fxCop, Code Contract 4, StyleCop, SandCastle, Sonar
+| [.hdlist1]*Tests / Intégration Continue*
+| Nunit/xUnit, SpecFlow, MSTest, Jenkins
 
-Systèmes d’exploitation::
-Windows (7-10), Linux (Debian), Windows Server 2008
+| [.hdlist1]*Outils divers*
+| fxCop, Code Contract 4, StyleCop, SandCastle, Sonar
 
-Technologies mobiles::
-Android
+| [.hdlist1]*Systèmes d’exploitation*
+| Windows (7-10), Linux (Debian), Windows Server 2008
 
-Langues::
-Anglais: Lu, écrit, parlé
+| [.hdlist1]*Technologies mobiles*
+| Android
 
+| [.hdlist1]*Langues*
+| Anglais: Lu, écrit, parlé
+
+|===
 
 == Etudes et diplômes
 
-[horizontal]
-2008:: 
-Diplôme d'ingénieur de l'EPITA (Le Kremlin-Bicêtre) +
+[frame="none", grid="none", stripes="none", cols="<15,<85"]
+|===
+
+| [.hdlist1]*2008*
+| Diplôme d'ingénieur de l'EPITA (Le Kremlin-Bicêtre) +
 Option calcul scientifique et imagerie
 
+|===
 
 [.timeline]
 == Expériences professionnelles
