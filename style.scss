@@ -19,3 +19,19 @@
         grid-column: 3;
     }
 }
+
+h1 {
+    background-image: url("h1_bg.svg");
+    background-position-y: bottom;
+    background-repeat: repeat-x;
+    background-size: 0.5em;
+    background-clip: padding-box;
+}
+
+// body {
+//     background-image: url("bg.svg");
+//     background-repeat: repeat;
+//     background-position-y: top;
+//     background-position-x: left;
+
+// }
