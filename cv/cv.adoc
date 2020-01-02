@@ -11,7 +11,7 @@ ifdef::backend-pdf[:notitle:]
 
 ifdef::backend-pdf[] 
 
-[discrete] 
+[discrete]
 = {author}
 
 [%autowidth, frame="none", grid="none", stripes="none", cols="^.^,<"]
@@ -102,11 +102,28 @@ Option calcul scientifique et imagerie
 [.timeline]
 == Expériences professionnelles
 
+=== LinkyPilot: pilotage du système Linky
+[.job-description]
+icon:group[] *Intégrateur Devops @ ENEDIS (Lyon), pôle Nex'us* +
+icon:calendar[] _De juin 2019 à aujourd'hui_
+
+Au sein d'une équipe de 30 personnes, participation au déploiement et suivi opérationnel, ainsi
+qu'au développement des outils associés à ces tâches.
+
+Outils de déploiement::
+jenkins, ansible, outil historique de déploiement (interne à Enedis)
+
+Déploiement::
+réalisation des déploiements, synchronisation avec les équipes d'exploitation
+
+Suivi opérationnel::
+analyse et résolution des tickets remontés par les utilisateurs ou l'exploitant
+
 === OSAK: Outils de Simulation Autour du K
 
 [.job-description]
 icon:group[] *Lead Développeur @ ENEDIS (Lyon), pôle HyperPERF* +
-icon:calendar[] _De janvier 2017 à aujourd'hui_
+icon:calendar[] _De janvier 2017 à mars 2019_
 
 Au sein d’une équipe de 10 personnes, participation à la conception-réalisation de l’application OSAK. 
 
@@ -212,27 +229,27 @@ Afin de répondre aux besoins de ses clients dans un contexte d’expansion mond
 L’objectif de ce projet est de faire de AntiFOG un élément capital de la stratégie de TRIGO et de permettre un déploiement sur la plateforme cloud Microsoft *Azure*.
 
 Conception:: 
-* Analyse de l’existant et des prérequis à la conception d’une application ASP.NET reposant   sur la plateforme Cloud Windows Azure
+* Analyse de l’existant et des prérequis à la conception d’une application ASP.NET reposant sur la plateforme Cloud Windows Azure
 * Définition de l’architecture physique et logicielle
-* Définition des normes de développement du projet, mise en place des outils de contrôle      qualité (FxCop, Microsoft Code Analysis)
+* Définition des normes de développement du projet, mise en place des outils de contrôle qualité (FxCop, Microsoft Code Analysis)
 * Rédaction du DAT, du manuel développeur
 
 Développement::
 * Initialisation du projet, initialisation des environnements de développement
 * Mise en place des outils et script d’intégration continue (PowerShell et Jenkins)
-* Développement et mise en place d’un outil d’extraction des tests Specflow sous forme de     spécifications HTML
+* Développement et mise en place d’un outil d’extraction des tests Specflow sous forme de spécifications HTML
 
 * Définition des bonnes pratiques : 
-** Définition des couches et de leur responsabilités et transfert de compétence aux autres     développeurs
-** Mise en place de différentes stratégies de tests : unitaires, tests "behavior oriented"     avec SpecFlow, tests d’acceptation et d’intégration (Selenium) 
+** Définition des couches et de leur responsabilités et transfert de compétence aux autres développeurs
+** Mise en place de différentes stratégies de tests : unitaires, tests "behavior oriented" avec SpecFlow, tests d’acceptation et d’intégration (Selenium) 
 
 * Développement de composants réutilisables dans l’application :
-** Développement d’un système de pagination, tri et filtrage, faisant interface avec un        composant « tableau » HTML/js (Datatables.net) et Entity Framework
-** Développement du système d’autorisations et permissions, reposant sur des claims (WIF),     intégration avec ASP.NET
-** Développement d’un système de traduction des textes de l’application reposant sur GNU       xgettext et Vernacular, intégration avec ASP.NET
+** Développement d’un système de pagination, tri et filtrage, faisant interface avec un composant « tableau » HTML/js (Datatables.net) et Entity Framework
+** Développement du système d’autorisations et permissions, reposant sur des claims (WIF), intégration avec ASP.NET
+** Développement d’un système de traduction des textes de l’application reposant sur GNU xgettext et Vernacular, intégration avec ASP.NET
 
 * Support aux développeurs
-* Identification et résolution des problèmes de performances rencontrés sur l’application :   contention sur la session utilisateur, performances des requêtes LINQ Entity Framework
+* Identification et résolution des problèmes de performances rencontrés sur l’application : contention sur la session utilisateur, performances des requêtes LINQ Entity Framework
 
 Installation et déploiement::
 * Définition et construction de l’infrastructure sur Microsoft Azure
@@ -271,11 +288,11 @@ _Migration technologies et maintenance de près de 30 applications métiers diff
 * Prise de connaissances auprès de l’ancien responsable de la TMA
 * Mise en place de l’infrastructure nécessaire au suivi et développement de 30 applications
 * Chiffrage et spécification des évolutions des applications VBA/Excel
-* Chiffrage, spécification et conception des nouvelles applications .NET, définition de       l’architecture et des bonnes pratiques à suivre sur les nouvelles applications
+* Chiffrage, spécification et conception des nouvelles applications .NET, définition de l’architecture et des bonnes pratiques à suivre sur les nouvelles applications
 * Réalisation d’une douzaine d’applications en WPF
-* Réalisation en WPF de composants réutilisables et d’une feuille de style correspondant à    la charte graphique de GDF SUEZ
+* Réalisation en WPF de composants réutilisables et d’une feuille de style correspondant à la charte graphique de GDF SUEZ
 * Encadrement des développeurs sur les applications .NET et sur VBA/Excel
-* Rôle moteur au sein du projet en argumentant l’intérêt de la migration d’applications       VBA/Excel vers la plateforme .NET avec WPF
+* Rôle moteur au sein du projet en argumentant l’intérêt de la migration d’applications VBA/Excel vers la plateforme .NET avec WPF
 
 Projet OSIPE:: 
 _Système de simulation de la gestion du portefeuille d’actifs électriques de la Branche Energie France, de calcul des indicateurs de risques financiers et macro-économiques associés et de test des stratégies de gestion des couvertures_
