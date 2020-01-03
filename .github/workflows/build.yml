@@ -1,0 +1,12 @@
+name: build asciidoctor
+on: [push]
+
+jobs:
+  build_html:
+    name: generate html
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: mgred/asciidoctor-action@master
+      with:
+        args: asciidoctor -b html5 -o index.html index.adoc
