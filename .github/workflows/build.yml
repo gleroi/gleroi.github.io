@@ -2,11 +2,20 @@ name: build asciidoctor
 on: [push]
 
 jobs:
-  build_html:
-    name: generate html
+  build_index:
+    name: generate index html
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - uses: mgred/asciidoctor-action@master
       with:
-        args: asciidoctor -b html5 -o index.html index.adoc
+        entrypoint: asciidoctor
+        args: index.adoc
+    - uses: mgred/asciidoctor-action@master
+      with:
+        entrypoint: asciidoctor
+        args: cv/cv.adoc
+    - uses: mgred/asciidoctor-action@master
+      with:
+        args: cat cv/cv.html
+  
