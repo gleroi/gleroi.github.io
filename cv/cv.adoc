@@ -110,40 +110,32 @@ Option calcul scientifique et imagerie
 icon:group[] *Intégrateur Devops @ ENEDIS (Lyon), pôle Nex'us* +
 icon:calendar[] _De juin 2019 à aujourd'hui_
 
-Au sein d'une équipe de 30 personnes, participation au déploiement et suivi opérationnel, ainsi
-qu'au développement des outils associés à ces tâches.
+Au sein d'une équipe de 30 personnes, participation au déploiement et suivi opérationnel, ainsi qu'au développement des outils associés à ces tâches.
 
 LinkyPilot fournit un ensemble de rapports et d'analyse utilisés par les différentes unités d'Enedis pour décider des commandes, du déploiement, de la maintenance des compteurs et concentrateurs et des facturations liés à Linky. Elle sert aussi de source de données de références pour tous les SI en aval.
 
 Outils de déploiement::
 _Uniformisation et industrialisation des outils de déploiement_
 +
-LinkyPilot est déployée à l'aide de Jenkins pour l'orchestration des déploiements, et d'ansible
-et d'un outil interne pour la réalisation du déploiement.
+LinkyPilot est déployée à l'aide de Jenkins pour l'orchestration des déploiements, et d'ansible et d'un outil interne pour la réalisation du déploiement.
 
-* Reprise en main des jobs Jenkins: uniformisation des jobs selon les environnements de déploiement,
-en les redéveloppant en Groovy et versionnage sous GIT (pérennité, uniformité entre environnement).
-* Nettoyage des roles et playbook ansible: mise à jour d'ansible 2.1 vers ansible 2.8, réorganisation
-des groupes et host.
+* Reprise en main des jobs Jenkins: uniformisation des jobs selon les environnements de déploiement, en les redéveloppant en Groovy et versionnage sous GIT (pérennité, uniformité entre environnement).
+* Nettoyage des roles et playbook ansible: mise à jour d'ansible 2.1 vers ansible 2.8, réorganisation des groupes et host.
 * Migration des scripts d'installation de l'outil de déploiement historique vers ansible.
 * Mise en place de l'utilisation d'Hashicorp Vault: extraction des mots de passes en dur,
-migration des mots de passe Keepass vers Vault, développements des outils de
-transfert entre environnements et de mise à jour des secrets.
+migration des mots de passe Keepass vers Vault, développements des outils de transfert entre environnements et de mise à jour des secrets.
 
 //-
 
 Déploiement::
 _Mise en pré-production et production de LinkyPilot_
-
++
 En tant qu'intégrateur, l'une des tâches à accomplir est la mise en production des nouvelles
 versions de l'applicatif LinkyPilot:
 
-* Préparation de la release: synchronisation avec les membres de l'équipe pour décider ce qui
-sera embarqué pour la MEP
-* Exécution du déploiement et réalisation des tâches manuelles requises ou synchronisation avec 
-les membres de l'équipe responsable de la tâche.
-* Rédaction du compte rendu du déploiement et remontée des actions prises ou à prendre en cas 
-de problèmes.
+* Préparation de la release: synchronisation avec les membres de l'équipe pour décider ce qui sera embarqué pour la MEP
+* Exécution du déploiement et réalisation des tâches manuelles requises ou synchronisation avec les membres de l'équipe responsable de la tâche.
+* Rédaction du compte rendu du déploiement et remontée des actions prises ou à prendre en cas de problèmes.
 
 //-
 
