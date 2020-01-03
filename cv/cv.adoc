@@ -133,7 +133,7 @@ _Mise en pré-production et production de LinkyPilot_
 En tant qu'intégrateur, l'une des tâches à accomplir est la mise en production des nouvelles
 versions de l'applicatif LinkyPilot:
 
-* Préparation de la release: synchronisation avec les membres de l'équipe pour décider ce qui sera embarqué pour la MEP
+* Préparation de la release: synchronisation avec les membres de l'équipe pour décider ce qui sera embarqué pour la MEP.
 * Exécution du déploiement et réalisation des tâches manuelles requises ou synchronisation avec les membres de l'équipe responsable de la tâche.
 * Rédaction du compte rendu du déploiement et remontée des actions prises ou à prendre en cas de problèmes.
 
@@ -141,8 +141,7 @@ versions de l'applicatif LinkyPilot:
 
 Suivi opérationnel::
 
-L'équipe intégration est aussi responsable de l'analyse et de la résolution des tickets d'anomalies
-relatifs a des erreurs technique remontées par les utilisateurs ou par l'exploitant d'Enedis.
+L'équipe intégration est aussi responsable de l'analyse et de la résolution des tickets d'anomalies relatifs a des erreurs technique remontées par les utilisateurs ou par l'exploitant d'Enedis.
 
 * suivi des logs et des métriques remontés par _telegraf_ depuis _grafana_.
 * analyse et conseil au près des autres équipes LinkyPilot.
