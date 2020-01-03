@@ -51,7 +51,7 @@ endif::[]
 |===
 
 | [.hdlist1]*Langages*
-| *C#*, *Go*, Java (Android, J2SE), JavaScript, Typescript, Shell (sh, bash)
+| *C#*, *Go*, Java (Android, J2SE), JavaScript, Typescript, Shell (sh, bash), Python, Groovy
 
 | [.hdlist1]*SGBD*
 | Oracle 9i-10g, SQL Server 2005-2008, PostgreSQL 9
@@ -73,6 +73,9 @@ endif::[]
 
 | [.hdlist1]*Tests / Intégration Continue*
 | Nunit/xUnit, SpecFlow, MSTest, Jenkins
+
+| [.hdlist1]*Déploiements / suivi opérationel*
+| Ansible, Telegraf
 
 | [.hdlist1]*Outils divers*
 | fxCop, Code Contract 4, StyleCop, SandCastle, Sonar
@@ -110,14 +113,53 @@ icon:calendar[] _De juin 2019 à aujourd'hui_
 Au sein d'une équipe de 30 personnes, participation au déploiement et suivi opérationnel, ainsi
 qu'au développement des outils associés à ces tâches.
 
+LinkyPilot fournit un ensemble de rapports et d'analyse utilisés par les différentes unités d'Enedis pour décider des commandes, du déploiement, de la maintenance des compteurs et concentrateurs et des facturations liés à Linky. Elle sert aussi de source de données de références pour tous les SI en aval.
+
 Outils de déploiement::
-jenkins, ansible, outil historique de déploiement (interne à Enedis)
+_Uniformisation et industrialisation des outils de déploiement_
++
+LinkyPilot est déployée à l'aide de Jenkins pour l'orchestration des déploiements, et d'ansible
+et d'un outil interne pour la réalisation du déploiement.
+
+* Reprise en main des jobs Jenkins: uniformisation des jobs selon les environnements de déploiement,
+en les redéveloppant en Groovy et versionnage sous GIT (pérennité, uniformité entre environnement).
+* Nettoyage des roles et playbook ansible: mise à jour d'ansible 2.1 vers ansible 2.8, réorganisation
+des groupes et host.
+* Migration des scripts d'installation de l'outil de déploiement historique vers ansible.
+* Mise en place de l'utilisation d'Hashicorp Vault: extraction des mots de passes en dur,
+migration des mots de passe Keepass vers Vault, développements des outils de
+transfert entre environnements et de mise à jour des secrets.
+
+//-
 
 Déploiement::
-réalisation des déploiements, synchronisation avec les équipes d'exploitation
+_Mise en pré-production et production de LinkyPilot_
+
+En tant qu'intégrateur, l'une des tâches à accomplir est la mise en production des nouvelles
+versions de l'applicatif LinkyPilot:
+
+* Préparation de la release: synchronisation avec les membres de l'équipe pour décider ce qui
+sera embarqué pour la MEP
+* Exécution du déploiement et réalisation des tâches manuelles requises ou synchronisation avec 
+les membres de l'équipe responsable de la tâche.
+* Rédaction du compte rendu du déploiement et remontée des actions prises ou à prendre en cas 
+de problèmes.
+
+//-
 
 Suivi opérationnel::
-analyse et résolution des tickets remontés par les utilisateurs ou l'exploitant
+
+L'équipe intégration est aussi responsable de l'analyse et de la résolution des tickets d'anomalies
+relatifs a des erreurs technique remontées par les utilisateurs ou par l'exploitant d'Enedis.
+
+* suivi des logs et des métriques remontés par _telegraf_ depuis _grafana_.
+* analyse et conseil au près des autres équipes LinkyPilot.
+
+//-
+
+[horizontal, role="job-tech"]
+Environnement technique::
+Jenkins, Ansible, Hashicorp Vault, Python 2&3, Groovy, Bash, Java, Telegraf, Grafana
 
 === OSAK: Outils de Simulation Autour du K
 
