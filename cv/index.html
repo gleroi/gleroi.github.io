@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.5">
+<meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="Guillaume Leroi">
 <title>Curriculum Vitae</title>
 <link rel="stylesheet" href="./cv.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="article">
 <div id="header">
@@ -24,7 +24,7 @@
 <div class="sect1">
 <h2 id="_rôles">Rôles</h2>
 <div class="sectionbody">
-<table class="tableblock frame-none grid-none">
+<table class="tableblock frame-none grid-none stripes-none fit-content">
 <colgroup>
 <col>
 <col>
@@ -71,7 +71,7 @@ et conception logicielle</p>
 <div class="sect1">
 <h2 id="_compétences_techniques">Compétences techniques</h2>
 <div class="sectionbody">
-<table class="tableblock frame-none grid-none">
+<table class="tableblock frame-none grid-none stripes-none fit-content">
 <colgroup>
 <col>
 <col>
@@ -79,7 +79,7 @@ et conception logicielle</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong class="hdlist1">Langages</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>C#</strong>, <strong>Go</strong>, Java (Android, J2SE), JavaScript, Typescript, Shell (sh, bash)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>C#</strong>, <strong>Go</strong>, Java (Android, J2SE), JavaScript, Typescript, Shell (sh, bash), Python, Groovy</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong class="hdlist1">SGBD</strong></p></td>
@@ -110,6 +110,10 @@ et conception logicielle</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Nunit/xUnit, SpecFlow, MSTest, Jenkins</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong class="hdlist1">Déploiements / suivi opérationel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ansible, Telegraf</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong class="hdlist1">Outils divers</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">fxCop, Code Contract 4, StyleCop, SandCastle, Sonar</p></td>
 </tr>
@@ -132,7 +136,7 @@ et conception logicielle</p>
 <div class="sect1">
 <h2 id="_etudes_et_diplômes">Etudes et diplômes</h2>
 <div class="sectionbody">
-<table class="tableblock frame-none grid-none spread">
+<table class="tableblock frame-none grid-none stripes-none stretch">
 <colgroup>
 <col style="width: 15%;">
 <col style="width: 85%;">
@@ -151,10 +155,106 @@ Option calcul scientifique et imagerie</p></td>
 <h2 id="_expériences_professionnelles">Expériences professionnelles</h2>
 <div class="sectionbody">
 <div class="sect2">
+<h3 id="_linkypilot_pilotage_du_système_linky">LinkyPilot: pilotage du système Linky</h3>
+<div class="paragraph job-description">
+<p><span class="icon"><i class="fa fa-group"></i></span> <strong>Intégrateur Devops @ ENEDIS (Lyon), pôle Nex&#8217;us</strong><br>
+<span class="icon"><i class="fa fa-calendar"></i></span> <em>De juin 2019 à aujourd&#8217;hui</em></p>
+</div>
+<div class="paragraph">
+<p>Au sein d&#8217;une équipe de 30 personnes, participation au déploiement et suivi opérationnel, ainsi qu&#8217;au développement des outils associés à ces tâches.</p>
+</div>
+<div class="paragraph">
+<p>LinkyPilot fournit un ensemble de rapports et d&#8217;analyse utilisés par les différentes unités d&#8217;Enedis pour décider des commandes, du déploiement, de la maintenance des compteurs et concentrateurs et des facturations liés à Linky. Elle sert aussi de source de données de références pour tous les SI en aval.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Outils de déploiement</dt>
+<dd>
+<p><em>Uniformisation et industrialisation des outils de déploiement</em></p>
+<div class="paragraph">
+<p>LinkyPilot est déployée à l&#8217;aide de Jenkins pour l&#8217;orchestration des déploiements, et d&#8217;ansible et d&#8217;un outil interne pour la réalisation du déploiement.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reprise en main des jobs Jenkins: uniformisation des jobs selon les environnements de déploiement, en les redéveloppant en Groovy et versionnage sous GIT (pérennité, uniformité entre environnement).</p>
+</li>
+<li>
+<p>Nettoyage des roles et playbook ansible: mise à jour d&#8217;ansible 2.1 vers ansible 2.8, réorganisation des groupes et host.</p>
+</li>
+<li>
+<p>Migration des scripts d&#8217;installation de l&#8217;outil de déploiement historique vers ansible.</p>
+</li>
+<li>
+<p>Mise en place de l&#8217;utilisation d&#8217;Hashicorp Vault: extraction des mots de passes en dur,
+migration des mots de passe Keepass vers Vault, développements des outils de transfert entre environnements et de mise à jour des secrets.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Déploiement</dt>
+<dd>
+<p><em>Mise en pré-production et production de LinkyPilot</em></p>
+<div class="paragraph">
+<p>En tant qu&#8217;intégrateur, l&#8217;une des tâches à accomplir est la mise en production des nouvelles
+versions de l&#8217;applicatif LinkyPilot:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Préparation de la release: synchronisation avec les membres de l&#8217;équipe pour décider ce qui sera embarqué pour la MEP.</p>
+</li>
+<li>
+<p>Exécution du déploiement et réalisation des tâches manuelles requises ou synchronisation avec les membres de l&#8217;équipe responsable de la tâche.</p>
+</li>
+<li>
+<p>Rédaction du compte rendu du déploiement et remontée des actions prises ou à prendre en cas de problèmes.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Suivi opérationnel</dt>
+<dd>
+<p>L&#8217;équipe intégration est aussi responsable de l&#8217;analyse et de la résolution des tickets d&#8217;anomalies relatifs a des erreurs technique remontées par les utilisateurs ou par l&#8217;exploitant d&#8217;Enedis.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>suivi des logs et des métriques remontés par <em>telegraf</em> depuis <em>grafana</em>.</p>
+</li>
+<li>
+<p>analyse et conseil au près des autres équipes LinkyPilot.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="hdlist job-tech">
+<table>
+<tr>
+<td class="hdlist1">
+Environnement technique
+</td>
+<td class="hdlist2">
+<p>Jenkins, Ansible, Hashicorp Vault, Python 2&amp;3, Groovy, Bash, Java, Telegraf, Grafana</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_osak_outils_de_simulation_autour_du_k">OSAK: Outils de Simulation Autour du K</h3>
 <div class="paragraph job-description">
 <p><span class="icon"><i class="fa fa-group"></i></span> <strong>Lead Développeur @ ENEDIS (Lyon), pôle HyperPERF</strong><br>
-<span class="icon"><i class="fa fa-calendar"></i></span> <em>De janvier 2017 à aujourd&#8217;hui</em></p>
+<span class="icon"><i class="fa fa-calendar"></i></span> <em>De janvier 2017 à mars 2019</em></p>
 </div>
 <div class="paragraph">
 <p>Au sein d’une équipe de 10 personnes, participation à la conception-réalisation de l’application OSAK.</p>
@@ -387,13 +487,13 @@ L’objectif de ce projet est de faire de AntiFOG un élément capital de la str
 <div class="ulist">
 <ul>
 <li>
-<p>Analyse de l’existant et des prérequis à la conception d’une application ASP.NET reposant   sur la plateforme Cloud Windows Azure</p>
+<p>Analyse de l’existant et des prérequis à la conception d’une application ASP.NET reposant sur la plateforme Cloud Windows Azure</p>
 </li>
 <li>
 <p>Définition de l’architecture physique et logicielle</p>
 </li>
 <li>
-<p>Définition des normes de développement du projet, mise en place des outils de contrôle      qualité (FxCop, Microsoft Code Analysis)</p>
+<p>Définition des normes de développement du projet, mise en place des outils de contrôle qualité (FxCop, Microsoft Code Analysis)</p>
 </li>
 <li>
 <p>Rédaction du DAT, du manuel développeur</p>
@@ -412,17 +512,17 @@ L’objectif de ce projet est de faire de AntiFOG un élément capital de la str
 <p>Mise en place des outils et script d’intégration continue (PowerShell et Jenkins)</p>
 </li>
 <li>
-<p>Développement et mise en place d’un outil d’extraction des tests Specflow sous forme de     spécifications HTML</p>
+<p>Développement et mise en place d’un outil d’extraction des tests Specflow sous forme de spécifications HTML</p>
 </li>
 <li>
 <p>Définition des bonnes pratiques :</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Définition des couches et de leur responsabilités et transfert de compétence aux autres     développeurs</p>
+<p>Définition des couches et de leur responsabilités et transfert de compétence aux autres développeurs</p>
 </li>
 <li>
-<p>Mise en place de différentes stratégies de tests : unitaires, tests "behavior oriented"     avec SpecFlow, tests d’acceptation et d’intégration (Selenium)</p>
+<p>Mise en place de différentes stratégies de tests : unitaires, tests "behavior oriented" avec SpecFlow, tests d’acceptation et d’intégration (Selenium)</p>
 </li>
 </ul>
 </div>
@@ -432,13 +532,13 @@ L’objectif de ce projet est de faire de AntiFOG un élément capital de la str
 <div class="ulist">
 <ul>
 <li>
-<p>Développement d’un système de pagination, tri et filtrage, faisant interface avec un        composant « tableau » HTML/js (Datatables.net) et Entity Framework</p>
+<p>Développement d’un système de pagination, tri et filtrage, faisant interface avec un composant « tableau » HTML/js (Datatables.net) et Entity Framework</p>
 </li>
 <li>
-<p>Développement du système d’autorisations et permissions, reposant sur des claims (WIF),     intégration avec ASP.NET</p>
+<p>Développement du système d’autorisations et permissions, reposant sur des claims (WIF), intégration avec ASP.NET</p>
 </li>
 <li>
-<p>Développement d’un système de traduction des textes de l’application reposant sur GNU       xgettext et Vernacular, intégration avec ASP.NET</p>
+<p>Développement d’un système de traduction des textes de l’application reposant sur GNU xgettext et Vernacular, intégration avec ASP.NET</p>
 </li>
 </ul>
 </div>
@@ -447,7 +547,7 @@ L’objectif de ce projet est de faire de AntiFOG un élément capital de la str
 <p>Support aux développeurs</p>
 </li>
 <li>
-<p>Identification et résolution des problèmes de performances rencontrés sur l’application :   contention sur la session utilisateur, performances des requêtes LINQ Entity Framework</p>
+<p>Identification et résolution des problèmes de performances rencontrés sur l’application : contention sur la session utilisateur, performances des requêtes LINQ Entity Framework</p>
 </li>
 </ul>
 </div>
@@ -536,19 +636,19 @@ pour GDF SUEZ&#8201;&#8212;&#8201;Branche Energie Europe (Paris)</strong><br>
 <p>Chiffrage et spécification des évolutions des applications VBA/Excel</p>
 </li>
 <li>
-<p>Chiffrage, spécification et conception des nouvelles applications .NET, définition de       l’architecture et des bonnes pratiques à suivre sur les nouvelles applications</p>
+<p>Chiffrage, spécification et conception des nouvelles applications .NET, définition de l’architecture et des bonnes pratiques à suivre sur les nouvelles applications</p>
 </li>
 <li>
 <p>Réalisation d’une douzaine d’applications en WPF</p>
 </li>
 <li>
-<p>Réalisation en WPF de composants réutilisables et d’une feuille de style correspondant à    la charte graphique de GDF SUEZ</p>
+<p>Réalisation en WPF de composants réutilisables et d’une feuille de style correspondant à la charte graphique de GDF SUEZ</p>
 </li>
 <li>
 <p>Encadrement des développeurs sur les applications .NET et sur VBA/Excel</p>
 </li>
 <li>
-<p>Rôle moteur au sein du projet en argumentant l’intérêt de la migration d’applications       VBA/Excel vers la plateforme .NET avec WPF</p>
+<p>Rôle moteur au sein du projet en argumentant l’intérêt de la migration d’applications VBA/Excel vers la plateforme .NET avec WPF</p>
 </li>
 </ul>
 </div>
